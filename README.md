@@ -1,7 +1,10 @@
 
-![image](https://github.com/user-attachments/assets/bec4fe88-b2c9-428a-b9f4-79efacf60ea3)
-![image](https://github.com/user-attachments/assets/ac9d2f85-716a-4b26-b076-057c593c6511)
-![image](https://github.com/user-attachments/assets/e2017b9f-367f-49ea-9814-aac7b3980a18)
+<img width="1919" height="864" alt="image" src="https://github.com/user-attachments/assets/f3b40584-139c-42bb-8f91-8b4b1286e28f" />
+
+<img width="1919" height="718" alt="image" src="https://github.com/user-attachments/assets/651e5a64-7a84-4705-8727-2e45812ed471" />
+
+<img width="1919" height="490" alt="image" src="https://github.com/user-attachments/assets/cab6216e-d2c4-4974-a0e9-ad966bde75e1" />
+
 
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&background=FFF52500&width=435&lines=Ajivika%3A+Knowledge+without+boundary)](https://git.io/typing-svg)
