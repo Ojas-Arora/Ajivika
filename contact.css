@@ -1,49 +1,61 @@
 body {
     font-family: Arial, sans-serif;
     background-color: var(--body-bg);
+    overflow-x: hidden;
 }
+
 /* Style the scrollbar container */
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-    height: 12px; /* Height for horizontal scrollbar */
-  }
-  
-  /* Style the scrollbar track (background of the scrollbar) */
-  ::-webkit-scrollbar-track {
-    background: #2d2d2d; /* Dark background */
+    width: 12px;
+    /* Width of the scrollbar */
+    height: 12px;
+    /* Height for horizontal scrollbar */
+}
+
+/* Style the scrollbar track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #2d2d2d;
+    /* Dark background */
     border-radius: 10px;
-  }
-  
-  /* Style the scrollbar thumb (the draggable part) */
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #f7e8b6, #f0d48c); /* Gradient using different yellow shades */
-    border-radius: 10px; /* Rounded corners */
-    border: 3px solid #1a1a1a; /* Border around the thumb */
-  }
-  
-  /* Hover effect for the thumb */
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #f0d48c, #e6c85b); /* Lighter gradient on hover */
-  }
-  
-  /* Optional: Style for the scrollbar corner */
-  ::-webkit-scrollbar-corner {
-    background: #2d2d2d; /* Dark background for corner */
-  }
-  
-  /* Style for horizontal scrollbar */
-  ::-webkit-scrollbar-horizontal {
-    height: 12px; /* Height for horizontal scrollbar */
-  }
-  
-  ::-webkit-scrollbar-thumb-horizontal {
-    background: linear-gradient(90deg, #f7e8b6, #f0d48c); /* Horizontal gradient */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f7e8b6, #f0d48c);
+    /* Gradient using different yellow shades */
     border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb-horizontal:hover {
+    /* Rounded corners */
+    border: 3px solid #1a1a1a;
+    /* Border around the thumb */
+}
+
+/* Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #f0d48c, #e6c85b);
+    /* Lighter gradient on hover */
+}
+
+/* Optional: Style for the scrollbar corner */
+::-webkit-scrollbar-corner {
+    background: #2d2d2d;
+    /* Dark background for corner */
+}
+
+/* Style for horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+    height: 12px;
+    /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+    background: linear-gradient(90deg, #f7e8b6, #f0d48c);
+    /* Horizontal gradient */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb-horizontal:hover {
     background: linear-gradient(90deg, #f0d48c, #e6c85b);
-  }
+}
 
 :root {
     --body-bg: antiquewhite;
@@ -75,9 +87,9 @@ html .dark {
     --text-area-focus: #00001c;
 }
 
-#cursor{
+#cursor {
     height: 20px;
-    width:20px;
+    width: 20px;
     background-color: rgba(234, 169, 84, 0.845);
     border-radius: 50%;
     position: fixed;
@@ -88,6 +100,7 @@ html .dark {
     justify-content: center;
     z-index: 10;
 }
+
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -97,10 +110,10 @@ html .dark {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .logo h2{
-    margin-left: 150%;
-  }
-  
+.navbar .logo h2 {
+    margin-left: 0;
+}
+
 .mySlides {
     display: none;
     position: relative;
@@ -115,6 +128,7 @@ html .dark {
     from {
         opacity: 0.4;
     }
+
     to {
         opacity: 1;
     }
@@ -173,7 +187,7 @@ html .dark {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color:#FFD465;
+    background-color: #FFD465;
     color: #FFD465;
     border-radius: 50%;
     display: inline-block;
@@ -211,7 +225,7 @@ html .dark {
 
 .option {
     text-align: center;
-    background-color:  #f7f7f7;
+    background-color: #f7f7f7;
     border-radius: 8px;
     padding: 20px;
     width: 150px;
@@ -228,15 +242,18 @@ html .dark {
     font-size: 16px;
     color: var(--card-text);
 }
-.options-container:hover{
+
+.options-container:hover {
     color: #FFD465;
 }
+
 .option:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .option a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 
@@ -256,7 +273,7 @@ section h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color:#d6a52b;
+    background-color: #d6a52b;
     color: white;
     border: none;
     border-radius: 50%;
@@ -276,11 +293,14 @@ section h2 {
 .image-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Aligns the button to the left side */
-    background-color: transparent; /* Transparent background */
+    left: 20px;
+    /* Aligns the button to the left side */
+    background-color: transparent;
+    /* Transparent background */
     border: none;
     border-radius: 50%;
-    padding: 0; /* No padding for image button */
+    padding: 0;
+    /* No padding for image button */
     cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 9999;
@@ -289,16 +309,20 @@ section h2 {
 .image-button:hover {
     transform: scale(1.1);
 }
+
 .about-box {
-background-color: #f9f9f9;
-border: 2px solid #d6a52b;
-border-radius: 10px;
-padding: 20px;
-margin: 20px auto; /* Auto margin centers the box horizontally */
-width: 80%;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-display: block; /* Ensures it behaves like a block-level element */
-text-align: left; /* Adjusts text alignment, optional */
+    background-color: #f9f9f9;
+    border: 2px solid #d6a52b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    /* Auto margin centers the box horizontally */
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    /* Ensures it behaves like a block-level element */
+    text-align: left;
+    /* Adjusts text alignment, optional */
 }
 
 
@@ -321,26 +345,30 @@ text-align: left; /* Adjusts text alignment, optional */
     z-index: 999;
     transition: color 0.3s ease;
 }
-  
+
 .back-button:hover {
     color: #d6a52b;
 }
-body.dark .back-button{
+
+body.dark .back-button {
     color: white;
 }
 
-body.dark .back-button:hover{
+body.dark .back-button:hover {
     color: #d6a52b;
 }
 
 .image-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Aligns the button to the left side */
-    background-color: transparent; /* Transparent background */
+    left: 20px;
+    /* Aligns the button to the left side */
+    background-color: transparent;
+    /* Transparent background */
     border: none;
     border-radius: 50%;
-    padding: 0; /* No padding for image button */
+    padding: 0;
+    /* No padding for image button */
     cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 1000;
@@ -445,13 +473,17 @@ body.dark .back-button:hover{
     margin-right: 10px;
     color: var(--icon-color);
 }
+
 .image-button1 {
     position: fixed;
     /* top: 5px; */
-    left: -6px; /* Aligns the button to the left side */
-    background-color: transparent; /* Transparent background */
+    left: -6px;
+    /* Aligns the button to the left side */
+    background-color: transparent;
+    /* Transparent background */
     border: none;
-    padding: 0; /* No padding for image button */
+    padding: 0;
+    /* No padding for image button */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -473,15 +505,25 @@ body.dark .back-button:hover{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    min-height: calc(100vh - 120px);
-    gap: 20px;
+    padding-top: 120px;
+    /* added spacing for navbar */
+    min-height: 100vh;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.illustration-section {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .illustration-section img {
     max-width: 100%;
-    width: 800px;
     height: auto;
-    
+    object-fit: contain;
 }
 
 /* .form-section {
@@ -683,10 +725,10 @@ body.dark .back-button:hover{
     display: flex;
     align-items: center;
     position: relative;
-  }
-  
-   /* Tooltip text  */
-  .tooltip .tooltiptext {
+}
+
+/* Tooltip text  */
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 200px;
     background-color: #007BFF;
@@ -696,86 +738,110 @@ body.dark .back-button:hover{
     padding: 5px;
     position: absolute;
     left: 70%;
-    margin-left: -100px; 
+    margin-left: -100px;
     top: 48%;
     transform: translateY(-50%);
     opacity: 0;
     transition: opacity 0.3s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 13px;
-  }
-    
-  /* Show the tooltip on hover */
-  .tooltip:hover .tooltiptext {
+}
+
+/* Show the tooltip on hover */
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
+}
+
 footer {
     padding: 10px;
     background-color: var(--primary-color);
     color: var(--footer-text);
     text-align: center;
-  }
+}
 
-  @media(max-width:768px) {
-    .image-icon1{
-      width: 50px;
-      height: 50px;
-      top: 10px;
+@media(max-width:768px) {
+    .container {
+        padding-top: 100px;
+        flex-direction: column;
+    }
+
+    .illustration-section {
+        display: none;
+        /* Optionally hide image on small screens to save space, or keep it */
+    }
+
+    .form-section {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .image-icon1 {
+        width: 50px;
+        height: 50px;
+        top: 10px;
     }
 
     .navbar .logo h2 {
-      font-size: 1.7em;
-      margin-left: 117%;
-  }
+        font-size: 1.7em;
+        margin-left: 117%;
+    }
 
-  .image-icon{
-    width: 78px;
-    height: 78px;
-  }
-  }
+    .image-icon {
+        width: 78px;
+        height: 78px;
+    }
+}
 
-  @media(max-width:425px) {
-    .about-box h1{
-      font-size: 2rem;
+@media(max-width:425px) {
+    .about-box h1 {
+        font-size: 2rem;
     }
 
     .back-button {
-      left: 8px;
+        left: 8px;
     }
-  }
-  .quick-link ul li:hover,
-  .resources ul li:hover {
+}
+
+.quick-link ul li:hover,
+.resources ul li:hover {
     text-decoration: underline;
-  }
+}
 
-  .social-icons div a {
+.social-icons div a {
     transition: all 0.3s ease;
-  }
+}
 
-  .social-icons div a:hover {
+.social-icons div a:hover {
     scale: 1.3;
     rotate: 15deg;
-  }
-  .social-icons div a i.fa-facebook-f:hover {
+}
+
+.social-icons div a i.fa-facebook-f:hover {
     color: rgb(51, 51, 199);
-  }
-  .social-icons div a i.fa-x-twitter:hover {
+}
+
+.social-icons div a i.fa-x-twitter:hover {
     color: rgb(51, 98, 199);
-  }
-  .social-icons div a i.fa-linkedin-in:hover {
+}
+
+.social-icons div a i.fa-linkedin-in:hover {
     color: rgb(51, 132, 199);
-  }
-  .social-icons div a i.fa-instagram:hover {
+}
+
+.social-icons div a i.fa-instagram:hover {
     color: rgb(199, 51, 167);
-  }
-  .subscribe-section form input[type="email"] {
+}
+
+.subscribe-section form input[type="email"] {
     border-radius: 4px;
     height: 4vh;
     border: none;
     padding: 10px;
-  }
-  .subscribe-button {
+}
+
+.subscribe-button {
     padding: 10px 62px;
     border: none;
     border-radius: 5px;
@@ -783,59 +849,68 @@ footer {
     color: #222;
     font-weight: 600;
     cursor: pointer;
-  }
+}
 
-  .subscribe-button:hover {
+.subscribe-button:hover {
     background-color: #d7b96b;
-  }
+}
 
-  .goog-te-gadget-simple {
+.goog-te-gadget-simple {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .subscribe-section form input[type="email"] {
-      height: 5vh;
-      width: 69%;
+        height: 5vh;
+        width: 69%;
     }
-    .subscribe-button {
-      width: 69%;
-    }
-  }
 
-  @media (max-width: 426px) {
-    .subscribe-section form input[type="email"] {
-      text-align: center;
-      padding: 16px 42px;
-    }
     .subscribe-button {
-      padding: 10px 90px;
+        width: 69%;
+    }
+}
+
+@media (max-width: 426px) {
+    .subscribe-section form input[type="email"] {
+        text-align: center;
+        padding: 16px 42px;
+    }
+
+    .subscribe-button {
+        padding: 10px 90px;
     }
 
     .option {
-      width: 100%;
+        width: 100%;
     }
-  }
-  .orange, h3{
+}
+
+.orange,
+h3 {
     color: #d6a52b;
 }
-.footer-section h3{
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  }
+
+.footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
 
 /* CSS for Scroll to Top Button */
 #scrollBtn {
     position: fixed;
 
-    bottom: 93px; /* Place closer to the bottom */
+    bottom: 93px;
+    /* Place closer to the bottom */
 
-    bottom: 88px; /* Place closer to the bottom */
+    bottom: 88px;
+    /* Place closer to the bottom */
 
-    right: 30px; /* Place closer to the right */
-    display: none; /* Initially hidden */
+    right: 30px;
+    /* Place closer to the right */
+    display: none;
+    /* Initially hidden */
     background-color: #d6a52b;
     color: white;
     border: none;
@@ -844,11 +919,14 @@ footer {
     font-size: 18px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure visibility above other elements */
+    z-index: 1000;
+    /* Ensure visibility above other elements */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #scrollBtn:hover {
-    background-color: #ffd700; /* Change color on hover */
-    transform: scale(1.2); /* Slightly enlarge */
+    background-color: #ffd700;
+    /* Change color on hover */
+    transform: scale(1.2);
+    /* Slightly enlarge */
 }

@@ -14,33 +14,32 @@ tl.from(".nav-links li", {
     y: -30
 })
 
-gsap.from(".feature-card", {
-    scale: 0,
-    duration: 1,
-    rotate: 1440,
-    ease: "steps.out"
-})
-
-
+// Cursor Logic
 const cursor = document.querySelector("#cursor");
 const body = document.querySelector("body")
-body.addEventListener("mousemove", function (e) {
-    gsap.to(cursor, {
-        x: e.x,
-        y: e.y,
-        duration: 0.5
-    })
-})
 
+if (cursor) {
+    body.addEventListener("mousemove", function (e) {
+        gsap.to(cursor, {
+            x: e.x,
+            y: e.y,
+            duration: 0.5,
+            ease: "power2.out"
+        })
+    })
+}
+
+// Scroll Animations for Option Cards
 gsap.from(".options-container .option-card", {
-    scale: 0,
-    duration: 2,
+    scale: 0.8, /* Less aggressive scale */
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
     scrollTrigger: {
         trigger: ".options-container",
         scroller: "body",
-        scrub: 2,
-        start: "top 70%",
-        end: "top 70%",
-        pin: true
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse"
     }
 })

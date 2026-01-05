@@ -1,45 +1,58 @@
 /* General Dark Mode Styles */
 body.dark {
   background-color: #121212;
-  background-image: none; /* Optional: Remove background image in dark mode */
-  color: #e0e0e0; /* Lighter text color for contrast */
+  background-image: none;
+  /* Optional: Remove background image in dark mode */
+  color: #e0e0e0;
+  /* Lighter text color for contrast */
 }
+
 /* Style the scrollbar container */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
-  height: 12px; /* Height for horizontal scrollbar */
+  width: 12px;
+  /* Width of the scrollbar */
+  height: 12px;
+  /* Height for horizontal scrollbar */
 }
 
 /* Style the scrollbar track (background of the scrollbar) */
 ::-webkit-scrollbar-track {
-  background: #2d2d2d; /* Dark background */
+  background: #2d2d2d;
+  /* Dark background */
   border-radius: 10px;
 }
 
 /* Style the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f7e8b6, #f0d48c); /* Gradient using different yellow shades */
-  border-radius: 10px; /* Rounded corners */
-  border: 3px solid #1a1a1a; /* Border around the thumb */
+  background: linear-gradient(180deg, #f7e8b6, #f0d48c);
+  /* Gradient using different yellow shades */
+  border-radius: 10px;
+  /* Rounded corners */
+  border: 3px solid #1a1a1a;
+  /* Border around the thumb */
 }
 
 /* Hover effect for the thumb */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #f0d48c, #e6c85b); /* Lighter gradient on hover */
+  background: linear-gradient(180deg, #f0d48c, #e6c85b);
+  /* Lighter gradient on hover */
 }
 
 /* Optional: Style for the scrollbar corner */
 ::-webkit-scrollbar-corner {
-  background: #2d2d2d; /* Dark background for corner */
+  background: #2d2d2d;
+  /* Dark background for corner */
 }
 
 /* Style for horizontal scrollbar */
 ::-webkit-scrollbar-horizontal {
-  height: 12px; /* Height for horizontal scrollbar */
+  height: 12px;
+  /* Height for horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-thumb-horizontal {
-  background: linear-gradient(90deg, #f7e8b6, #f0d48c); /* Horizontal gradient */
+  background: linear-gradient(90deg, #f7e8b6, #f0d48c);
+  /* Horizontal gradient */
   border-radius: 10px;
 }
 
@@ -49,68 +62,83 @@ body.dark {
 
 /* Dark Mode for Title */
 body.dark .title {
-  background: linear-gradient(90deg, #4a4a4a, #ffffff); /* Dark gradient for text */
+  background: linear-gradient(90deg, #4a4a4a, #ffffff);
+  /* Dark gradient for text */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #fff; /* Fallback text color */
+  color: #fff;
+  /* Fallback text color */
 }
 
 /* Dark Mode for Contributors Grid */
 body.dark .contributors-grid {
-  background-color: transparent; /* Maintain layout in dark mode */
+  background-color: transparent;
+  /* Maintain layout in dark mode */
 }
 
 /* Dark Mode for Contributor Card */
 body.dark .contributor-card {
-  background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Dark gradient */
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* Deeper shadow for dark mode */
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+  /* Dark gradient */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  /* Deeper shadow for dark mode */
 }
 
 body.dark .contributor-card:before {
-  background: rgba(255, 255, 255, 0.05); /* Subtle white overlay */
+  background: rgba(255, 255, 255, 0.05);
+  /* Subtle white overlay */
 }
 
 /* Dark Mode Hover Effects */
 body.dark .contributor-card:hover {
-  background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* Reverse gradient for hover */
-  box-shadow: 0 25px 60px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  /* Reverse gradient for hover */
+  box-shadow: 0 25px 60px rgba(255, 255, 255, 0.1);
+  /* Subtle white shadow */
 }
 
 /* Dark Mode for Avatar */
 body.dark .contributor-card img {
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2); /* Light shadow for avatar */
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  /* Light shadow for avatar */
 }
 
 /* Dark Mode for Contributor Name */
 body.dark .contributor-card h3 {
-  color: #e0e0e0; /* Light text color for contrast */
-  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+  color: #e0e0e0;
+  /* Light text color for contrast */
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  /* Subtle white shadow */
 }
 
 body.dark .contributor-card h3::after {
-  background: linear-gradient(145deg, #f1c40f, #e67e22); /* Adjusted yellow gradient */
+  background: linear-gradient(145deg, #f1c40f, #e67e22);
+  /* Adjusted yellow gradient */
 }
 
 body.dark .contributor-card h3:hover {
   color: #f39c12;
-  text-shadow: 0 4px 20px rgba(243, 156, 18, 0.8); /* Brighter glow effect */
+  text-shadow: 0 4px 20px rgba(243, 156, 18, 0.8);
+  /* Brighter glow effect */
 }
 
 /* Dark Mode for Body Text */
 body.dark p {
-  color: #cccccc; /* Slightly muted text for readability */
+  color: #cccccc;
+  /* Slightly muted text for readability */
 }
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#cursor{
+
+#cursor {
   height: 20px;
-  width:20px;
+  width: 20px;
   background-color: rgba(234, 169, 84, 0.845);
   border-radius: 50%;
   position: fixed;
@@ -123,481 +151,100 @@ body.dark p {
 }
 
 .image-button {
-    position: fixed;
-    z-index: 1;
-    bottom: 20px;
-    left: 20px; /* Aligns the button to the left side */
-    background-color: transparent; /* Transparent background */
-    border: none;
-    border-radius: 50%;
-    padding: 0; /* No padding for image button */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .image-button:hover {
-    transform: scale(1.1);
-  }
-
-  .image-icon {
-    width: 120px;
-    height: 120px;
-    z-index: 2;
-    position: relative;
-  }
-  
-  .image-button1 {
-    background-color: transparent; /* Transparent background */
-    border: none;
-    padding: 0; /* No padding for image button */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .image-button1:hover {
-    transform: scale(1.1);
-  }
-
-  .image-icon1 {
-    width: 68px;
-    height: 68px;
-    z-index: 2;
-    position: relative;
-  }
-
-  .navbar .logo {
-    gap: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .navbar .logo h2 {
-    margin-top: 10px;
-  }
-
-  .navbar li span {
-    display: none;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
-  }
-  .navbar li {
-    display: flex;
-  }
-  .nav-links li a i {
-    color: #000;
-  }
-  .navbar li:hover span {
-    opacity: 1;
-    display: inline;
-  }
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2b2b28;
-    text-align: center;
-    padding: 10px 20px;
-    position: sticky;
-    height: 80px;
-    top: 0;
-    z-index: 9999;
-}
-.navbar .logo h2{
-    margin-top: 10px;
-  }  
-
-.navbar .logo h2{
-    font-size: 2em;
-}
-.nav-links{
-    align-items: center;
-}
-.navbar .logo {
-    gap: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  position: fixed;
+  z-index: 1;
+  bottom: 20px;
+  left: 20px;
+  /* Aligns the button to the left side */
+  background-color: transparent;
+  /* Transparent background */
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  /* No padding for image button */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.navbar li span{
-    display: none;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
-}
-.navbar li{
-    display: flex;
-}
-.nav-links li a i{
-    color: #000;
-}
-.navbar li:hover span{
-    opacity: 1;
-    display:inline;
+.image-button:hover {
+  transform: scale(1.1);
 }
 
-.navbar .logo h2 {
-    color: aliceblue;
-    margin-top: 10px;
+.image-icon {
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+  position: relative;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
+.image-button1 {
+  background-color: transparent;
+  /* Transparent background */
+  border: none;
+  padding: 0;
+  /* No padding for image button */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.nav-links li {
-    margin-right: 10px;
+.image-button1:hover {
+  transform: scale(1.1);
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: double;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 50px; /* Rounded edges */
-    background-color: rgb(133 133 133 / 20%);
+.image-icon1 {
+  width: 68px;
+  height: 68px;
+  z-index: 2;
+  position: relative;
 }
 
-.nav-links a i {
-    margin-right: 8px;
-    border-radius: 50%; /* Make icons round */
-    padding: 5px;
-    background-color: #E1C16E; /* Slightly transparent background for icons */
-}
 
-.nav-links a:hover {
-    color: #000;
-    background-color: #efb106; /* A bit lighter on hover */
-}
 
-.translate-button {
-           
-            
-    background-color: transparent;
-        border: none;
-        border-radius: 50%;
-        
-        font-size: 30px;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
 
-    .translate-button:hover {
-        background-color: #0056b3;
-    }
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        justify-content: space-between;
-        background: transparent;
-        border: none;
-        padding: 0;
-    }
-    
-    .hamburger span {
-        height: 3px;
-        width: 100%;
-        background: #fff;
-        display: block;
-        border-radius: 10px;
-        margin: 8px 0;
-        width: 45px;
-        height: 6px;
-    }
-/* toggle button ui styles */
-.theme-switch {
-    --toggle-size: 15px;
-    /* the size is adjusted using font-size,
-       this is not transform scale,
-       so you can choose any size */
-    --container-width: 5.625em;
-    --container-height: 2.5em;
-    --container-radius: 6.25em;
-    /* radius 0 - minecraft mode :) */
-    --container-light-bg: #3D7EAE;
-    --container-night-bg: #1D1F2C;
-    --circle-container-diameter: 3.375em;
-    --sun-moon-diameter: 2.125em;
-    --sun-bg: #ECCA2F;
-    --moon-bg: #C4C9D1;
-    --spot-color: #959DB1;
-    --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
-    --stars-color: #fff;
-    --clouds-color: #F3FDFF;
-    --back-clouds-color: #AACADF;
-    --transition: .5s cubic-bezier(0, -0.02, 0.4, 1.25);
-    --circle-transition: .3s cubic-bezier(0, -0.02, 0.35, 1.17);
-  }
-  
-  .theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: var(--toggle-size);
-  }
-  
-  .theme-switch__container {
-    width: var(--container-width);
-    height: var(--container-height);
-    background-color: var(--container-light-bg);
-    border-radius: var(--container-radius);
-    overflow: hidden;
-    cursor: pointer;
-    -webkit-box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
-    box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
-    -webkit-transition: var(--transition);
-    -o-transition: var(--transition);
-    transition: var(--transition);
-    position: relative;
-  }
-  
-  .theme-switch__container::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-    -webkit-box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
-    box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
-    border-radius: var(--container-radius)
-  }
-  
-  .theme-switch__checkbox {
-    display: none;
-  }
-  
-  .theme-switch__circle-container {
-    width: var(--circle-container-diameter);
-    height: var(--circle-container-diameter);
-    background-color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    left: var(--circle-container-offset);
-    top: var(--circle-container-offset);
-    border-radius: var(--container-radius);
-    -webkit-box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transition: var(--circle-transition);
-    -o-transition: var(--circle-transition);
-    transition: var(--circle-transition);
-    pointer-events: none;
-  }
-  
-  .theme-switch__sun-moon-container {
-    pointer-events: auto;
-    position: relative;
-    z-index: 2;
-    width: var(--sun-moon-diameter);
-    height: var(--sun-moon-diameter);
-    margin: auto;
-    border-radius: var(--container-radius);
-    background-color: var(--sun-bg);
-    -webkit-box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
-    box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
-    -webkit-filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
-    filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
-    overflow: hidden;
-    -webkit-transition: var(--transition);
-    -o-transition: var(--transition);
-    transition: var(--transition);
-  }
-  
-  .theme-switch__moon {
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
-    width: 100%;
-    height: 100%;
-    background-color: var(--moon-bg);
-    border-radius: inherit;
-    -webkit-box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
-    box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
-    -webkit-transition: var(--transition);
-    -o-transition: var(--transition);
-    transition: var(--transition);
-    position: relative;
-  }
-  
-  .theme-switch__spot {
-    position: absolute;
-    top: 0.75em;
-    left: 0.312em;
-    width: 0.75em;
-    height: 0.75em;
-    border-radius: var(--container-radius);
-    background-color: var(--spot-color);
-    -webkit-box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
-    box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
-  }
-  
-  .theme-switch__spot:nth-of-type(2) {
-    width: 0.375em;
-    height: 0.375em;
-    top: 0.937em;
-    left: 1.375em;
-  }
-  
-  .theme-switch__spot:nth-last-of-type(3) {
-    width: 0.25em;
-    height: 0.25em;
-    top: 0.312em;
-    left: 0.812em;
-  }
-  
-  .theme-switch__clouds {
-    width: 1.25em;
-    height: 1.25em;
-    background-color: var(--clouds-color);
-    border-radius: var(--container-radius);
-    position: absolute;
-    bottom: -0.625em;
-    left: 0.312em;
-    -webkit-box-shadow: 0.937em 0.312em var(--clouds-color), -0.312em -0.312em var(--back-clouds-color), 1.437em 0.375em var(--clouds-color), 0.5em -0.125em var(--back-clouds-color), 2.187em 0 var(--clouds-color), 1.25em -0.062em var(--back-clouds-color), 2.937em 0.312em var(--clouds-color), 2em -0.312em var(--back-clouds-color), 3.625em -0.062em var(--clouds-color), 2.625em 0em var(--back-clouds-color), 4.5em -0.312em var(--clouds-color), 3.375em -0.437em var(--back-clouds-color), 4.625em -1.75em 0 0.437em var(--clouds-color), 4em -0.625em var(--back-clouds-color), 4.125em -2.125em 0 0.437em var(--back-clouds-color);
-    box-shadow: 0.937em 0.312em var(--clouds-color), -0.312em -0.312em var(--back-clouds-color), 1.437em 0.375em var(--clouds-color), 0.5em -0.125em var(--back-clouds-color), 2.187em 0 var(--clouds-color), 1.25em -0.062em var(--back-clouds-color), 2.937em 0.312em var(--clouds-color), 2em -0.312em var(--back-clouds-color), 3.625em -0.062em var(--clouds-color), 2.625em 0em var(--back-clouds-color), 4.5em -0.312em var(--clouds-color), 3.375em -0.437em var(--back-clouds-color), 4.625em -1.75em 0 0.437em var(--clouds-color), 4em -0.625em var(--back-clouds-color), 4.125em -2.125em 0 0.437em var(--back-clouds-color);
-    -webkit-transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
-    -o-transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
-    transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
-  }
-  
-  .theme-switch__stars-container {
-    position: absolute;
-    color: var(--stars-color);
-    top: -100%;
-    left: 0.312em;
-    width: 2.75em;
-    height: auto;
-    -webkit-transition: var(--transition);
-    -o-transition: var(--transition);
-    transition: var(--transition);
-  }
-  
-  /* actions */
-  
-  .theme-switch__checkbox:checked + .theme-switch__container {
-    background-color: var(--container-night-bg);
-  }
-  
-  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container {
-    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
-  }
-  
-  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
-    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em)
-  }
-  
-  .theme-switch__circle-container:hover {
-    left: calc(var(--circle-container-offset) + 0.187em);
-  }
-  
-  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon {
-    -webkit-transform: translate(0);
-    -ms-transform: translate(0);
-    transform: translate(0);
-  }
-  
-  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds {
-    bottom: -4.062em;
-  }
-  
-  .theme-switch__checkbox:checked + .theme-switch__container .theme-switch__stars-container {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+body {
 
-@media (max-width: 956px) {
-    .nav-links a {
-        font-size: 15px;
-    }
-    
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-    .hamburger span {
-      width: 28px;
-    height: 4px;
-    margin: 4px 0;
-    }
-    .navbar li:hover span{
-        opacity: 1;
-        display:inline;
-    }
-    .navbar li span{
-        display: none;
-        opacity: 0;
-        transition: opacity 1.2s ease-in-out;
-    }
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 10%;
-        background-color: black;
-        width: 50%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active li {
-        margin-right: 0;
-        text-align: center;
-    }
-
-    .nav-links.active a {
-        padding: 10px 20px;
-        border-radius: 0;
-    }
- }
- body {
-
-  background-image: url('../img/New\ Background.jpeg'); /* Replace with your image file */
+  background-image: url('../img/New\ Background.jpeg');
+  /* Replace with your image file */
   background-size: cover;
   background-color: #FAEBD7;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif; /* Default font */
-  color: black; /* Text color for contrast */
+  font-family: Arial, sans-serif;
+  /* Default font */
+  color: black;
+  /* Text color for contrast */
 }
 
 .container {
   text-align: center;
-  margin: 0 auto;
+  margin: 120px auto 20px;
   padding: 20px;
   max-width: 1200px;
 }
 
 .title {
-  font-family: 'Arial', sans-serif; /* You can use any font of your choice */
+  font-family: 'Arial', sans-serif;
+  /* You can use any font of your choice */
   font-size: 2.5rem;
   font-weight: bold;
   color: #333333;
-  text-transform: uppercase; /* Makes the text uppercase */
+  text-transform: uppercase;
+  /* Makes the text uppercase */
   margin-bottom: 20px;
-  letter-spacing: 1.5px; /* Adds spacing between letters */
-  background: linear-gradient(90deg, #303131, #262728); /* Gradient background */
-  -webkit-background-clip: text; /* Clips the gradient to the text */
-  background-clip: text; /* Standard property for compatibility */
-  -webkit-text-fill-color: transparent; /* Makes the background of the text transparent */
-  text-align: center; /* Centers the text */
+  letter-spacing: 1.5px;
+  /* Adds spacing between letters */
+  background: linear-gradient(90deg, #303131, #262728);
+  /* Gradient background */
+  -webkit-background-clip: text;
+  /* Clips the gradient to the text */
+  background-clip: text;
+  /* Standard property for compatibility */
+  -webkit-text-fill-color: transparent;
+  /* Makes the background of the text transparent */
+  text-align: center;
+  /* Centers the text */
 }
 
 
@@ -614,7 +261,8 @@ body.dark p {
 
 /* Contributor Card */
 .contributor-card {
-  background: linear-gradient(145deg, #fff8e1, #ffecb3); /* Light gradient */
+  background: linear-gradient(145deg, #fff8e1, #ffecb3);
+  /* Light gradient */
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
@@ -675,16 +323,18 @@ body.dark p {
 /* Pulse Effect for Avatar */
 @keyframes pulse {
   0% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
+
   50% {
-      transform: scale(1.1);
-      opacity: 0.8;
+    transform: scale(1.1);
+    opacity: 0.8;
   }
+
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -693,7 +343,8 @@ body.dark p {
   margin: 15px 0;
   font-size: 1.6rem;
   font-weight: bold;
-  color: #333; /* Default dark color */
+  color: #333;
+  /* Default dark color */
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
   position: relative;
@@ -707,7 +358,8 @@ body.dark p {
   bottom: -5px;
   width: 100%;
   height: 2px;
-  background: linear-gradient(145deg, #f1c40f, #f39c12); /* Warm yellow gradient */
+  background: linear-gradient(145deg, #f1c40f, #f39c12);
+  /* Warm yellow gradient */
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -718,8 +370,10 @@ body.dark p {
 
 /* Glow Effect for Name on Hover with a Subtle Yellow */
 .contributor-card h3:hover {
-  color: #f39c12; /* Subtle yellow color */
-  text-shadow: 0 4px 20px rgba(243, 156, 18, 0.6); /* Subtle yellow glow effect */
+  color: #f39c12;
+  /* Subtle yellow color */
+  text-shadow: 0 4px 20px rgba(243, 156, 18, 0.6);
+  /* Subtle yellow glow effect */
 }
 
 /* Pratik Ghuge CSS end */
@@ -729,30 +383,34 @@ body.dark p {
   padding: 10px 16px;
   border-radius: 20px;
   font-size: 1rem;
-  background-color:#d6a52b;
+  background-color: #d6a52b;
   color: var(--clouds-color);
   border: none;
   cursor: pointer;
   font-weight: bold;
 }
+
 .contributor-card button:hover {
-  background-color:linear-gradient(145deg, #f1c40f, #f39c12); /* Warm yellow gradient */
+  background-color: linear-gradient(145deg, #f1c40f, #f39c12);
+  /* Warm yellow gradient */
   transform: translateY(-2px);
 }
 
 /* Pulse Effect for Avatar */
 @keyframes pulse {
   0% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
+
   50% {
-      transform: scale(1.1);
-      opacity: 0.8;
+    transform: scale(1.1);
+    opacity: 0.8;
   }
+
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -762,6 +420,7 @@ body.dark p {
   from {
     transform: scale(0.5);
   }
+
   to {
     transform: scale(1.3);
   }
@@ -777,7 +436,8 @@ body.dark p {
   margin: 15px 0;
   font-size: 1.6rem;
   font-weight: bold;
-  color: #333; /* Default dark color */
+  color: #333;
+  /* Default dark color */
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
   position: relative;
@@ -791,7 +451,8 @@ body.dark p {
   bottom: -5px;
   width: 100%;
   height: 2px;
-  background: linear-gradient(145deg, #f1c40f, #f39c12); /* Warm yellow gradient */
+  background: linear-gradient(145deg, #f1c40f, #f39c12);
+  /* Warm yellow gradient */
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -802,119 +463,130 @@ body.dark p {
 
 /* Glow Effect for Name on Hover with a Subtle Yellow */
 .contributor-card h3:hover {
-  color: #f39c12; /* Subtle yellow color */
-  text-shadow: 0 4px 20px rgba(243, 156, 18, 0.6); /* Subtle yellow glow effect */
+  color: #f39c12;
+  /* Subtle yellow color */
+  text-shadow: 0 4px 20px rgba(243, 156, 18, 0.6);
+  /* Subtle yellow glow effect */
 }
 
 /* Pratik Ghuge CSS end */
 
-    
-  footer {
-    background-color: rgb(45, 43, 42);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+
+footer {
+  background-color: rgb(45, 43, 42);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
-.footer-section h3{
-font-size: 1rem;
-margin-bottom: 0.5rem;
+.footer-section h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
-#cursor{
-    height: 20px;
-    width:20px;
-    background-color: rgba(234, 169, 84, 0.845);
-    border-radius: 50%;
-    position: fixed;
-    font-size: 7px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
+
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: rgba(234, 169, 84, 0.845);
+  border-radius: 50%;
+  position: fixed;
+  font-size: 7px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
+
 .chat-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #d6a52b;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6a52b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
 
-  .chat-button:hover {
-    transform: scale(1.1);
-    background-color: #000;
-  }
+.chat-button:hover {
+  transform: scale(1.1);
+  background-color: #000;
+}
 
-  /* CSS for Scroll to Top Button */
-  #scrollBtn {
-    position: fixed;
-    bottom: 95px; /* Place closer to the bottom */
-    right: 30px; /* Place closer to the right */
-    display: none; /* Initially hidden */
-    background-color: #d6a52b;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure visibility above other elements */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+/* CSS for Scroll to Top Button */
+#scrollBtn {
+  position: fixed;
+  bottom: 95px;
+  /* Place closer to the bottom */
+  right: 30px;
+  /* Place closer to the right */
+  display: none;
+  /* Initially hidden */
+  background-color: #d6a52b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* Ensure visibility above other elements */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-  #scrollBtn:hover {
-    background-color: #FFD700; /* Change color on hover */
-    transform: scale(1.2); /* Slightly enlarge */
-  }
+#scrollBtn:hover {
+  background-color: #FFD700;
+  /* Change color on hover */
+  transform: scale(1.2);
+  /* Slightly enlarge */
+}
 
-  /* .social-icons div {
+/* .social-icons div {
     display: flex;justify-content: center; gap: 10px; font-size: 20px;
   } */
-  
 
-  @media screen and (max-width : 430px) {
-    .footer-section form {
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .footer-section form input {
-      width: 50%;
-    }
-  
-    .footer-section form button {
-      width: 50%;
-    }
-  
-    .image-icon{
-      width: 60px;
-      height: 60px;
-    }
-    .chat-button{
-      font-size: 18px;
-    } 
-  
-    #scrollBtn {
-      right: 25px;
-      font-size: 13px
-    }
 
-    .social-icons div {
-       gap: 16px;
-    }
-   }
+@media screen and (max-width : 430px) {
+  .footer-section form {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-section form input {
+    width: 50%;
+  }
+
+  .footer-section form button {
+    width: 50%;
+  }
+
+  .image-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .chat-button {
+    font-size: 18px;
+  }
+
+  #scrollBtn {
+    right: 25px;
+    font-size: 13px
+  }
+
+  .social-icons div {
+    gap: 16px;
+  }
+}
 
 .back-button {
   position: absolute;
@@ -930,13 +602,14 @@ margin-bottom: 0.5rem;
 }
 
 .back-button:hover {
-    color: #d6a52b;
+  color: #d6a52b;
 }
-body.dark .back-button{
+
+body.dark .back-button {
   color: white;
 }
 
-body.dark .back-button:hover{
+body.dark .back-button:hover {
   color: #d6a52b;
 }
 
@@ -948,15 +621,19 @@ body.dark .back-button:hover{
   scale: 1.3;
   rotate: 15deg;
 }
+
 .social-icons div a i.fa-facebook-f:hover {
   color: rgb(51, 51, 199);
 }
+
 .social-icons div a i.fa-x-twitter:hover {
   color: rgb(51, 98, 199);
 }
+
 .social-icons div a i.fa-linkedin-in:hover {
   color: rgb(51, 132, 199);
 }
+
 .social-icons div a i.fa-instagram:hover {
   color: rgb(199, 51, 167);
 }

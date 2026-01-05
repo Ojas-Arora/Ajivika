@@ -1,154 +1,150 @@
-/* General Styling */
+/* Global Styling Inherited from styles.css where possible, specifically overriding here */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #faebd7;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: var(--bg-color, #f9f9f9);
     margin: 0;
+    padding-top: 80px;
+    /* Offset for fixed navbar */
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+body.dark {
+    background-color: var(--bg-color, #121212);
 }
 
 /* Profile Container */
 .profile-container {
-    margin-top: 45rem;
-    margin-bottom: 1rem;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
+    background: var(--card-bg, #ffffff);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 4rem auto;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 
-/* Header */
+body.dark .profile-container {
+    background: #1e1e1e;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
 h2 {
-    color: rgb(255, 179, 71);
-    margin-bottom: 15px;
+    color: var(--primary-color, #d6a52b);
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 /* Profile Picture */
 .profile-picture {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
     position: relative;
-    margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem;
 }
 
 .profile-picture img {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    border: px solid rgb(255, 179, 71);
     object-fit: cover;
+    border: 4px solid var(--primary-color, #d6a52b);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-  
-    .hamburger {
-        display: flex;
-    }
-  
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 10%;
-        background-color: rgb(43, 43, 40);
-        width: 50%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-  
-    .nav-links.active li {
-        margin-right: 0;
-        text-align: center;
-    }
-  
-    .nav-links.active a {
-        padding: 10px 20px;
-        border-radius: 0;
-    }
-    
-  }
-/* Hidden File Input */
-#file-input {
-    display: none;
-}
-.image-icon1 {
-    width: 68px;
-    height: 68px;
-    z-index: 2;
-    position: relative;
-}
-/* Upload Button */
+
 .upload-btn {
-    display: inline-block;
-    width: 38%;
-    background-color: rgb(255, 179, 71);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-color, #d6a52b);
     color: white;
-    padding: 6px 12px;
-    margin-top: 8px;
-    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s;
+    font-size: 1.2rem;
 }
 
 .upload-btn:hover {
-    background-color: rgb(230, 140, 50);
+    transform: scale(1.1);
+    background-color: #dda838;
 }
 
-/* Form Input Fields */
+#file-input {
+    display: none;
+}
+
+/* Form Styles */
 .input-group {
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 .input-group label {
     display: block;
-    /* font-weight: bold; */
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-color, #333);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+body.dark .input-group label {
+    color: #ccc;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid rgb(15, 15, 14);
-    border-radius: 5px;
-    font-size: 14px;
-    transition: 0.3s;
+    padding: 12px 15px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--text-color, #333);
+    transition: border-color 0.3s;
+}
+
+body.dark .input-group input {
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
 .input-group input:focus {
-    border-color: rgb(230, 140, 50);
+    border-color: var(--primary-color, #d6a52b);
     outline: none;
 }
 
 /* Save Button */
 .save-btn {
     width: 100%;
-    padding: 12px;
-    background-color: rgb(255, 179, 71);
-    color: white;
+    padding: 15px;
+    background: linear-gradient(135deg, #d6a52b, #ffd465);
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    margin-top: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-#cursor {
-    position: fixed; /* Ensures it moves with the viewport */
-    pointer-events: none; /* Prevents interference with clickable elements */
-    transform: translate(-50%, -50%); /* Centers the cursor on the mouse pointer */
-}
+
 .save-btn:hover {
-    background-color: rgb(230, 140, 50);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 165, 43, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 2rem;
+        width: 95%;
+    }
 }

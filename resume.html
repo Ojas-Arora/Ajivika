@@ -1,319 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume - Career Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="resume.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  </head>
-  <style>
-    body.dark {
-      background-color: black;
-      color: white;
-    }
 
-    body.dark .resume-creator-section {
-      background-color: var(--primary-color);
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Career Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="resume.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<style>
+  body.dark {
+    background-color: black;
+    color: white;
+  }
 
-    body.dark .resume-creator-title {
-      color: #f39c12;
-    }
+  body.dark .resume-creator-section {
+    background-color: var(--primary-color);
+  }
 
-    body.dark .resume-creator-description {
-      color: #bdc3c7;
-    }
+  body.dark .resume-creator-title {
+    color: #f39c12;
+  }
 
-    body.dark .resume-creator-box {
-      background-color: #3b3b3b;
-      border: 1px solid #f39c12;
-    }
+  body.dark .resume-creator-description {
+    color: #bdc3c7;
+  }
 
-    body.dark .resume-creator-subtitle {
-      color: #f1c40f;
-    }
+  body.dark .resume-creator-box {
+    background-color: #3b3b3b;
+    border: 1px solid #f39c12;
+  }
 
-    body.dark .resume-creator-fieldset {
-      border: 1px solid #555;
-      background-color: #333;
-    }
+  body.dark .resume-creator-subtitle {
+    color: #f1c40f;
+  }
 
-    body.dark .resume-creator-legend {
-      color: #f1c40f;
-    }
+  body.dark .resume-creator-fieldset {
+    border: 1px solid #555;
+    background-color: #333;
+  }
 
-    body.dark .resume-creator-label {
-      color: #f1c40f;
-    }
+  body.dark .resume-creator-legend {
+    color: #f1c40f;
+  }
 
-    body.dark input, 
-    body.dark textarea, 
-    body.dark .resume-creator-input,
-    body.dark .resume-creator-textarea,
-    body.dark .resume-creator-input-file {
-      background-color: #333;
-      color: white;
-      border: 1px solid #666;
-    }
+  body.dark .resume-creator-label {
+    color: #f1c40f;
+  }
 
-    body.dark input:focus, 
-    body.dark textarea:focus,
-    body.dark .resume-creator-input:focus,
-    body.dark .resume-creator-textarea:focus,
-    body.dark .resume-creator-input-file:focus {
-      border-color: #f39c12;
-    }
+  body.dark input,
+  body.dark textarea,
+  body.dark .resume-creator-input,
+  body.dark .resume-creator-textarea,
+  body.dark .resume-creator-input-file {
+    background-color: #333;
+    color: white;
+    border: 1px solid #666;
+  }
 
-    body.dark .resume-creator-add-icon {
-      color: #f39c12;
-    }
+  body.dark input:focus,
+  body.dark textarea:focus,
+  body.dark .resume-creator-input:focus,
+  body.dark .resume-creator-textarea:focus,
+  body.dark .resume-creator-input-file:focus {
+    border-color: #f39c12;
+  }
 
-    body.dark .resume-creator-skills-list li,
-    body.dark .resume-creator-experience-list li,
-    body.dark .resume-creator-certifications-list li,
-    body.dark .resume-creator-languages-list li,
-    body.dark .resume-creator-references-list li,
-    body.dark .resume-creator-projects-list li,
-    body.dark .resume-creator-achievements-list li {
-      background-color: #444;
-      border: 1px solid #777;
-      color: white;
-    }
+  body.dark .resume-creator-add-icon {
+    color: #f39c12;
+  }
 
-    body.dark .resume-creator-button {
-      background-color: #f39c12;
-      color: white;
-    }
+  body.dark .resume-creator-skills-list li,
+  body.dark .resume-creator-experience-list li,
+  body.dark .resume-creator-certifications-list li,
+  body.dark .resume-creator-languages-list li,
+  body.dark .resume-creator-references-list li,
+  body.dark .resume-creator-projects-list li,
+  body.dark .resume-creator-achievements-list li {
+    background-color: #444;
+    border: 1px solid #777;
+    color: white;
+  }
 
-    body.dark .resume-creator-button:hover {
-      background-color: #e67e22;
-    }
+  body.dark .resume-creator-button {
+    background-color: #f39c12;
+    color: white;
+  }
+
+  body.dark .resume-creator-button:hover {
+    background-color: #e67e22;
+  }
+
+  .resume-creator-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .resume-creator-title {
+    font-size: 2.5em;
+    color: var(--resume-color);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .resume-creator-description {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .resume-creator-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #b9722b;
+  }
+
+  .resume-creator-subtitle {
+    font-size: 1.8em;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+
+  .resume-creator-fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+
+  .resume-creator-legend {
+    font-size: 1.3em;
+    color: #34495e;
+    font-weight: bold;
+    padding: 57px 10px 0px 10px;
+  }
+
+  .resume-creator-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  @media (max-width: 768px) {
 
     .resume-creator-section {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 95%;
+      margin: 20px auto;
+      padding: 15px;
     }
 
+
     .resume-creator-title {
-      font-size: 2.5em;
-      color: var(--resume-color);
-      text-align: center;
-      margin-bottom: 10px;
+      font-size: 2em;
     }
 
     .resume-creator-description {
-      font-size: 1.1em;
-      color: #7f8c8d;
-      text-align: center;
-      margin-bottom: 30px;
+      font-size: 1em;
     }
+
 
     .resume-creator-box {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #b9722b;
+      padding: 15px;
     }
 
-    .resume-creator-subtitle {
-      font-size: 1.8em;
-      color: #34495e;
-      margin-bottom: 20px;
-    }
-
-    .resume-creator-fieldset {
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      background-color: #ffffff;
-    }
-
-    .resume-creator-legend {
-      font-size: 1.3em;
-      color: #34495e;
-      font-weight: bold;
-      padding: 57px 10px 0px 10px;
-    }
-
-    .resume-creator-label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #2c3e50;
-    }
-    @media (max-width: 768px) {
-  
-  .resume-creator-section {
-    width: 95%;
-    margin: 20px auto;
-    padding: 15px;
-  }
-
- 
-  .resume-creator-title {
-    font-size: 2em;
-  }
-  
-  .resume-creator-description {
-    font-size: 1em;
-  }
-  
- 
-  .resume-creator-box {
-    padding: 15px;
-  }
-
-  
-  .resume-creator-input,
-  .resume-creator-textarea,
-  .resume-creator-input-file {
-    font-size: 0.95em;
-    padding: 8px;
-  }
-}
 
     .resume-creator-input,
     .resume-creator-textarea,
     .resume-creator-input-file {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 1em;
-      transition: border-color 0.3s ease;
+      font-size: 0.95em;
+      padding: 8px;
     }
-
-    .resume-creator-input:focus,
-    .resume-creator-textarea:focus,
-    .resume-creator-input-file:focus {
-      border-color: #3498db;
-      outline: none;
-    }
-
-    .resume-creator-textarea {
-      resize: vertical;
-      height: 51px;
-    }
-
-    .resume-creator-add-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    @media (max-width: 600px) {
-  .resume-creator-add-item {
-    flex-direction: column;
-    align-items: stretch;
   }
-  
-  .resume-creator-add-item input,
-  .resume-creator-add-item textarea {
+
+  .resume-creator-input,
+  .resume-creator-textarea,
+  .resume-creator-input-file {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
   }
-}
 
-    .resume-creator-add-icon {
-      cursor: pointer;
-      font-size: 1.5em;
-      color: #b9722b;
-      transition: color 0.3s ease;
+  .resume-creator-input:focus,
+  .resume-creator-textarea:focus,
+  .resume-creator-input-file:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+
+  .resume-creator-textarea {
+    resize: vertical;
+    height: 51px;
+  }
+
+  .resume-creator-add-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .resume-creator-add-item {
+      flex-direction: column;
+      align-items: stretch;
     }
 
-
-    .resume-creator-skills-list,
-    .resume-creator-experience-list,
-    .resume-creator-certifications-list,
-    .resume-creator-languages-list,
-    .resume-creator-references-list,
-    .resume-creator-projects-list li,
-    .resume-creator-achievements-list li {
-      list-style-type: none;
-      padding: 0;
+    .resume-creator-add-item input,
+    .resume-creator-add-item textarea {
+      width: 100%;
     }
+  }
 
-    .resume-creator-skills-list li,
-    .resume-creator-experience-list li,
-    .resume-creator-certifications-list li,
-    .resume-creator-languages-list li,
-    .resume-creator-references-list li,
-    .resume-creator-projects-list li,
-    .resume-creator-achievements-list li {
-      background-color: #ecf0f1;
-      padding: 10px;
-      margin-bottom: 5px;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-      color: #2c3e50;
-    }
+  .resume-creator-add-icon {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #b9722b;
+    transition: color 0.3s ease;
+  }
 
-    .resume-creator-button {
-      background-color: #b9722b;
-      color: #ffffff;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
 
-    .resume-creator-button:hover {
-      background-color: #c8833e;
-    }
+  .resume-creator-skills-list,
+  .resume-creator-experience-list,
+  .resume-creator-certifications-list,
+  .resume-creator-languages-list,
+  .resume-creator-references-list,
+  .resume-creator-projects-list li,
+  .resume-creator-achievements-list li {
+    list-style-type: none;
+    padding: 0;
+  }
 
-    .remove-btn{
-      cursor: pointer;
-      margin-left: 5px;
-    }
-  
-  </style>
-  <body>
-    <div id="cursor"></div>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="logo">
-          <button class="image-button1">
-              <img src="./AJIVIKA2.svg" alt="Image Button1" class="image-icon1" style="height: 65px; width: 65px;">
-          </button>
-      </div>
-          <!-- Floating Image Button -->
-  
-      <!-- hamburger menu -->
-  <button class="hamburger" onclick="toggleMenu()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-  </button>
-    <!-- Navigation Links -->
+  .resume-creator-skills-list li,
+  .resume-creator-experience-list li,
+  .resume-creator-certifications-list li,
+  .resume-creator-languages-list li,
+  .resume-creator-references-list li,
+  .resume-creator-projects-list li,
+  .resume-creator-achievements-list li {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    color: #2c3e50;
+  }
+
+  .resume-creator-button {
+    background-color: #b9722b;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+
+  .resume-creator-button:hover {
+    background-color: #c8833e;
+  }
+
+  .remove-btn {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+</style>
+
+<body>
+  <div id="cursor"></div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./AJIVIKA2.svg" alt="Ajivika Logo">
+    </a>
+
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <ul class="nav-links">
-      <li><a href="./index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+      <li><a href="./index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
       <li><a href="./about.html"><i class="fas fa-address-card"></i> <span>About Us</span></a></li>
       <li><a href="./contact.html"><i class="fas fa-envelope"></i> <span>Contact Us</span></a></li>
-      <li><a href="./pricing.html"><i class="fas fa-comments"></i><span>Go Pro</span></a></li>
-      <li>
-        <a href="./contributors/contributor.html"><i class="fas fa-users"></i><span>Contributors</span></a>
-      </li>
+      <li><a href="./pricing.html"><i class="fas fa-comments"></i> <span>Go Pro</span></a></li>
+      <li><a href="./contributors/contributor.html"><i class="fas fa-users"></i> <span>Contributors</span></a></li>
       <li><a href="./register.html"><i class="fas fa-user-plus"></i> <span>Register</span></a></li>
-      <li><button class="translate-button" onclick="toggleTranslate()">🌐</button>
-          <div id="google_translate_element"></div></li>
-      <li><label class="theme-switch">
+
+      <li>
+        <button class="translate-button" onclick="toggleTranslate()">🌐</button>
+        <div id="google_translate_element"
+          style="position: absolute; top: 60px; right: 0; display: none; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+      </li>
+
+      <li>
+        <label class="theme-switch">
           <input type="checkbox" class="theme-switch__checkbox">
           <div class="theme-switch__container">
             <div class="theme-switch__clouds"></div>
             <div class="theme-switch__stars-container">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                  fill="currentColor"></path>
               </svg>
             </div>
             <div class="theme-switch__circle-container">
@@ -326,685 +334,611 @@
               </div>
             </div>
           </div>
-        </label></li>
-       
-  </ul>
-  
-</nav>    
+        </label>
+      </li>
+    </ul>
+  </nav>
 
-    <!-- Resume Section -->
-    <div class="resume-creator-section">
-      <section class="resume-creator-container">
-        <h1 class="resume-creator-title">My Resume</h1>
-        <p class="resume-creator-description">This is where you can view and manage your resume details.</p>
-        <div class="resume-creator-box">
-          <h2 class="resume-creator-subtitle">Resume Detail Entry</h2>
-          <form id="resumeForm" class="resume-creator-form">
-            <!-- Personal Details -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Personal Details</legend>
-              <label for="photo" class="resume-creator-label">Upload Photo</label>
-              <input type="file" id="photo" name="photo" accept="image/*" class="resume-creator-input-file" />
-    
-              <label for="name" class="resume-creator-label">Full Name<b>*</b></label>
-              <input type="text" id="name" name="name" placeholder="Enter your Name" class="resume-creator-input" required />
-    
-              <label for="email" class="resume-creator-label">Email<b>*</b></label>
-              <input type="email" id="email" name="email" placeholder="Enter your Email" class="resume-creator-input" required />
-    
-              <label for="phone" class="resume-creator-label">Phone Number<b>*</b></label>
-              <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" class="resume-creator-input" required />
-            </fieldset>
-    
-            <!-- Education -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Education</legend>
-              <label for="class10" class="resume-creator-label">10th Percentage<b>*</b></label>
-              <input type="number" id="10th" name="10th" placeholder="Percentage (e.g., 75%)" class="resume-creator-input" required />
-    
-              <label for="schooling10" class="resume-creator-label">School<b>*</b></label>
-              <input type="text" id="10ths" name="10ths" placeholder="Enter School Name" class="resume-creator-input" required />
-    
-              <label for="class12" class="resume-creator-label">12th Percentage<b>*</b></label>
-              <input type="number" id="12th" name="12th" placeholder="Percentage (e.g., 75%)" class="resume-creator-input" required />
-    
-              <label for="schooling12" class="resume-creator-label">School/College<b>*</b></label>
-              <input type="text" id="12ths" name="12ths" placeholder="Enter your School/College name" class="resume-creator-input" required />
-    
-              <label for="degree" class="resume-creator-label">Degree<b>*</b></label>
-              <input type="text" id="degree" name="degree" placeholder="Enter Degree" class="resume-creator-input" required />
-    
-              <label for="institution" class="resume-creator-label">Institution<b>*</b></label>
-              <input type="text" id="institution" name="institution" placeholder="Enter Institution Name" class="resume-creator-input" required />
-    
-              <label for="major" class="resume-creator-label">Major/Field of Study<b>*</b></label>
-              <input type="text" id="major" name="major" placeholder="Enter Major/Field of Study" class="resume-creator-input" required />
-    
-              <label for="startYear" class="resume-creator-label">Start Year<b>*</b></label>
-              <input type="number" id="startYear" name="startYear" placeholder="YYYY" class="resume-creator-input" required />
-    
-              <label for="endYear" class="resume-creator-label">End Year<b>*</b></label>
-              <input type="number" id="endYear" name="endYear" placeholder="YYYY" class="resume-creator-input" required />
-            </fieldset>
-    
-            <!-- Skills -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Skills<b>*</b></legend>
-              <div class="resume-creator-skills-container">
-                <div class="resume-creator-add-item">
-                  <input type="text" id="skill-input" placeholder="Enter a skill" class="resume-creator-input" required />
-                  <span class="resume-creator-add-icon" onclick="addItem('Skill', 'skills-list', 'skill-input')">+</span>
-                </div>
-                <ul class="resume-creator-skills-list" id="skills-list"></ul>
-              </div>
-            </fieldset>
-    
-            <!-- Work Experience -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Work Experience</legend>
-              <div class="resume-creator-experience-container">
-                <div class="resume-creator-add-item">
-                  <input type="text" id="job-title" placeholder="Job Title" class="resume-creator-input"  />
-                  <input type="text" id="company-name" placeholder="Company Name" class="resume-creator-input"  />
-                  <input type="text" id="job-duration" placeholder="Duration (e.g., Jan 2020 - Dec 2022)" class="resume-creator-input"  />
-                  <textarea id="job-description" placeholder="Job Description" class="resume-creator-textarea" ></textarea>
-                  <span class="resume-creator-add-icon" onclick="addExperience()">+</span>
-                </div>
-                <ul class="resume-creator-experience-list" id="experience-list"></ul>
-              </div>
-            </fieldset>
-    
-            <!-- Certifications -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Certifications</legend>
-              <div class="resume-creator-certifications-container">
-                <div class="resume-creator-add-item">
-                  <input type="text" id="certification-input" placeholder="Enter Certification" class="resume-creator-input" />
-                  <span class="resume-creator-add-icon" onclick="addItem('Certification', 'certifications-list', 'certification-input')">+</span>
-                </div>
-                <ul class="resume-creator-certifications-list" id="certifications-list"></ul>
-              </div>
-            </fieldset>
+  <!-- Resume Section -->
+  <div class="resume-creator-section">
+    <section class="resume-creator-container">
+      <h1 class="resume-creator-title">My Resume</h1>
+      <p class="resume-creator-description">This is where you can view and manage your resume details.</p>
+      <div class="resume-creator-box">
+        <h2 class="resume-creator-subtitle">Resume Detail Entry</h2>
+        <form id="resumeForm" class="resume-creator-form">
+          <!-- Personal Details -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Personal Details</legend>
+            <label for="photo" class="resume-creator-label">Upload Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" class="resume-creator-input-file" />
 
-            <!-- Projects Section -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Projects</legend>
-              <div class="resume-creator-projects-container">
-                <div class="resume-creator-add-item">
-                  <input type="text" id="project-title" placeholder="Project Title" class="resume-creator-input"  />
-                  <textarea id="project-description" placeholder="Project Description" class="resume-creator-textarea" ></textarea>
-                  <input type="text" id="project-duration" placeholder="Duration (e.g., Jan 2022 - Dec 2022)" class="resume-creator-input"  />
-                  <input type="url" id="project-link" placeholder="Project Link (e.g., https://github.com)" class="resume-creator-input" />
-                  <span class="resume-creator-add-icon" onclick="addProject()">+</span>
-                </div>
-                <ul class="resume-creator-projects-list" id="projects-list"></ul>
+            <label for="name" class="resume-creator-label">Full Name<b>*</b></label>
+            <input type="text" id="name" name="name" placeholder="Enter your Name" class="resume-creator-input"
+              required />
+
+            <label for="email" class="resume-creator-label">Email<b>*</b></label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" class="resume-creator-input"
+              required />
+
+            <label for="phone" class="resume-creator-label">Phone Number<b>*</b></label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" class="resume-creator-input"
+              required />
+          </fieldset>
+
+          <!-- Education -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Education</legend>
+            <label for="class10" class="resume-creator-label">10th Percentage<b>*</b></label>
+            <input type="number" id="10th" name="10th" placeholder="Percentage (e.g., 75%)" class="resume-creator-input"
+              required />
+
+            <label for="schooling10" class="resume-creator-label">School<b>*</b></label>
+            <input type="text" id="10ths" name="10ths" placeholder="Enter School Name" class="resume-creator-input"
+              required />
+
+            <label for="class12" class="resume-creator-label">12th Percentage<b>*</b></label>
+            <input type="number" id="12th" name="12th" placeholder="Percentage (e.g., 75%)" class="resume-creator-input"
+              required />
+
+            <label for="schooling12" class="resume-creator-label">School/College<b>*</b></label>
+            <input type="text" id="12ths" name="12ths" placeholder="Enter your School/College name"
+              class="resume-creator-input" required />
+
+            <label for="degree" class="resume-creator-label">Degree<b>*</b></label>
+            <input type="text" id="degree" name="degree" placeholder="Enter Degree" class="resume-creator-input"
+              required />
+
+            <label for="institution" class="resume-creator-label">Institution<b>*</b></label>
+            <input type="text" id="institution" name="institution" placeholder="Enter Institution Name"
+              class="resume-creator-input" required />
+
+            <label for="major" class="resume-creator-label">Major/Field of Study<b>*</b></label>
+            <input type="text" id="major" name="major" placeholder="Enter Major/Field of Study"
+              class="resume-creator-input" required />
+
+            <label for="startYear" class="resume-creator-label">Start Year<b>*</b></label>
+            <input type="number" id="startYear" name="startYear" placeholder="YYYY" class="resume-creator-input"
+              required />
+
+            <label for="endYear" class="resume-creator-label">End Year<b>*</b></label>
+            <input type="number" id="endYear" name="endYear" placeholder="YYYY" class="resume-creator-input" required />
+          </fieldset>
+
+          <!-- Skills -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Skills<b>*</b></legend>
+            <div class="resume-creator-skills-container">
+              <div class="resume-creator-add-item">
+                <input type="text" id="skill-input" placeholder="Enter a skill" class="resume-creator-input" required />
+                <span class="resume-creator-add-icon" onclick="addItem('Skill', 'skills-list', 'skill-input')">+</span>
               </div>
-            </fieldset>
+              <ul class="resume-creator-skills-list" id="skills-list"></ul>
+            </div>
+          </fieldset>
+
+          <!-- Work Experience -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Work Experience</legend>
+            <div class="resume-creator-experience-container">
+              <div class="resume-creator-add-item">
+                <input type="text" id="job-title" placeholder="Job Title" class="resume-creator-input" />
+                <input type="text" id="company-name" placeholder="Company Name" class="resume-creator-input" />
+                <input type="text" id="job-duration" placeholder="Duration (e.g., Jan 2020 - Dec 2022)"
+                  class="resume-creator-input" />
+                <textarea id="job-description" placeholder="Job Description" class="resume-creator-textarea"></textarea>
+                <span class="resume-creator-add-icon" onclick="addExperience()">+</span>
+              </div>
+              <ul class="resume-creator-experience-list" id="experience-list"></ul>
+            </div>
+          </fieldset>
+
+          <!-- Certifications -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Certifications</legend>
+            <div class="resume-creator-certifications-container">
+              <div class="resume-creator-add-item">
+                <input type="text" id="certification-input" placeholder="Enter Certification"
+                  class="resume-creator-input" />
+                <span class="resume-creator-add-icon"
+                  onclick="addItem('Certification', 'certifications-list', 'certification-input')">+</span>
+              </div>
+              <ul class="resume-creator-certifications-list" id="certifications-list"></ul>
+            </div>
+          </fieldset>
+
+          <!-- Projects Section -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Projects</legend>
+            <div class="resume-creator-projects-container">
+              <div class="resume-creator-add-item">
+                <input type="text" id="project-title" placeholder="Project Title" class="resume-creator-input" />
+                <textarea id="project-description" placeholder="Project Description"
+                  class="resume-creator-textarea"></textarea>
+                <input type="text" id="project-duration" placeholder="Duration (e.g., Jan 2022 - Dec 2022)"
+                  class="resume-creator-input" />
+                <input type="url" id="project-link" placeholder="Project Link (e.g., https://github.com)"
+                  class="resume-creator-input" />
+                <span class="resume-creator-add-icon" onclick="addProject()">+</span>
+              </div>
+              <ul class="resume-creator-projects-list" id="projects-list"></ul>
+            </div>
+          </fieldset>
 
 
-            <!-- Achievements Section -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Achievements</legend>
-              <div class="resume-creator-achievements-container">
-                <div class="resume-creator-add-item">
-                  <textarea id="achievement-input" placeholder="Describe your achievement" class="resume-creator-textarea" ></textarea>
-                  <span class="resume-creator-add-icon" onclick="addItem('Achievement', 'achievements-list', 'achievement-input')">+</span>
-                </div>
-                <ul class="resume-creator-achievements-list" id="achievements-list"></ul>
+          <!-- Achievements Section -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Achievements</legend>
+            <div class="resume-creator-achievements-container">
+              <div class="resume-creator-add-item">
+                <textarea id="achievement-input" placeholder="Describe your achievement"
+                  class="resume-creator-textarea"></textarea>
+                <span class="resume-creator-add-icon"
+                  onclick="addItem('Achievement', 'achievements-list', 'achievement-input')">+</span>
               </div>
-            </fieldset>
-    
-            <!-- Languages -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">Languages <b>*</b></legend>
-              <div class="resume-creator-languages-container">
-                <div class="resume-creator-add-item">
-                  <input type="text" id="language-input" placeholder="Enter Language" class="resume-creator-input" required />
-                  <span class="resume-creator-add-icon" onclick="addItem('Language', 'languages-list', 'language-input')">+</span>
-                </div>
-                <ul class="resume-creator-languages-list" id="languages-list"></ul>
-              </div>
-            </fieldset>
-    
-            <!-- References -->
-            <fieldset class="resume-creator-fieldset">
-              <legend class="resume-creator-legend">References</legend>
-              <div class="resume-creator-references-container">
-                <div class="resume-creator-add-item">
-                  <input type="text" id="reference-name" placeholder="Reference Name" class="resume-creator-input" />
-                  <input type="text" id="reference-contact" placeholder="Contact Information" class="resume-creator-input"  />
-                  <span class="resume-creator-add-icon" onclick="addReference()">+</span>
-                </div>
-                <ul class="resume-creator-references-list" id="references-list"></ul>
-              </div>
-            </fieldset>
-    
-            <button type="button" class="resume-creator-button" onclick="generatePDF()">Download as PDF</button>
-          </form>
-        </div>
-      </section>
-    </div>
+              <ul class="resume-creator-achievements-list" id="achievements-list"></ul>
+            </div>
+          </fieldset>
 
-    <!-- footer  -->
-    <footer style="background-color: #222; color: #fff; padding: 20px 10px">
-      <div
-        class="footer-container"
-        style="
+          <!-- Languages -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">Languages <b>*</b></legend>
+            <div class="resume-creator-languages-container">
+              <div class="resume-creator-add-item">
+                <input type="text" id="language-input" placeholder="Enter Language" class="resume-creator-input"
+                  required />
+                <span class="resume-creator-add-icon"
+                  onclick="addItem('Language', 'languages-list', 'language-input')">+</span>
+              </div>
+              <ul class="resume-creator-languages-list" id="languages-list"></ul>
+            </div>
+          </fieldset>
+
+          <!-- References -->
+          <fieldset class="resume-creator-fieldset">
+            <legend class="resume-creator-legend">References</legend>
+            <div class="resume-creator-references-container">
+              <div class="resume-creator-add-item">
+                <input type="text" id="reference-name" placeholder="Reference Name" class="resume-creator-input" />
+                <input type="text" id="reference-contact" placeholder="Contact Information"
+                  class="resume-creator-input" />
+                <span class="resume-creator-add-icon" onclick="addReference()">+</span>
+              </div>
+              <ul class="resume-creator-references-list" id="references-list"></ul>
+            </div>
+          </fieldset>
+
+          <button type="button" class="resume-creator-button" onclick="generatePDF()">Download as PDF</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- footer  -->
+  <footer style="background-color: #222; color: #fff; padding: 20px 10px">
+    <div class="footer-container" style="
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
           gap: 20px;
           max-width: 1200px;
           margin: auto;
-        "
-      >
-        <!-- About Section -->
-        <div class="footer-section" style="flex: 1; min-width: 200px">
-          <h3>About Ajivika</h3>
-          <p style="font-size: 14px; line-height: 1.6">
-            Ajivika is your one-stop destination for career growth and learning.
-            From creating professional resumes to applying for top jobs, we
-            provide tools and resources for every career stage.
-          </p>
-        </div>
+        ">
+      <!-- About Section -->
+      <div class="footer-section" style="flex: 1; min-width: 200px">
+        <h3>About Ajivika</h3>
+        <p style="font-size: 14px; line-height: 1.6">
+          Ajivika is your one-stop destination for career growth and learning.
+          From creating professional resumes to applying for top jobs, we
+          provide tools and resources for every career stage.
+        </p>
+      </div>
 
-        <!-- Quick Links -->
-        <div
-          class="footer-section quick-link"
-          style="flex: 1; min-width: 200px"
-        >
-          <h3>Quick Links</h3>
-          <ul
-            style="
+      <!-- Quick Links -->
+      <div class="footer-section quick-link" style="flex: 1; min-width: 200px">
+        <h3>Quick Links</h3>
+        <ul style="
               list-style: none;
               padding: 0;
               font-size: 14px;
               line-height: 1.8;
-            "
-          >
-            <li>
-              <a href="./index.html" style="color: #fff; text-decoration: none"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a href="./about.html" style="color: #fff; text-decoration: none"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a
-                href="./contact.html"
-                style="color: #fff; text-decoration: none"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="./pricing.html"
-                style="color: #fff; text-decoration: none"
-                >Go Pro</a
-              >
-            </li>
-          </ul>
-        </div>
+            ">
+          <li>
+            <a href="./index.html" style="color: #fff; text-decoration: none">Home</a>
+          </li>
+          <li>
+            <a href="./about.html" style="color: #fff; text-decoration: none">About Us</a>
+          </li>
+          <li>
+            <a href="./contact.html" style="color: #fff; text-decoration: none">Contact</a>
+          </li>
+          <li>
+            <a href="./pricing.html" style="color: #fff; text-decoration: none">Go Pro</a>
+          </li>
+        </ul>
+      </div>
 
-        <!-- Resources -->
-        <div class="footer-section resources" style="flex: 1; min-width: 200px">
-          <h3>Resources</h3>
-          <ul
-            style="
+      <!-- Resources -->
+      <div class="footer-section resources" style="flex: 1; min-width: 200px">
+        <h3>Resources</h3>
+        <ul style="
               list-style: none;
               padding: 0;
               font-size: 14px;
               line-height: 1.8;
-            "
-          >
-            <li>
-              <a href="./blog.html" style="color: #fff; text-decoration: none"
-                >Blog</a
-              >
-            </li>
-            <li>
-              <a
-                href="./testimonial.html"
-                style="color: #fff; text-decoration: none"
-                >Testimonial</a
-              >
-            </li>
-            <li>
-              <a href="./faq.html" style="color: #fff; text-decoration: none"
-                >FAQs</a
-              >
-            </li>
-            <li>
-              <a href="./terms.html" style="color: #fff; text-decoration: none"
-                >Terms & Conditions</a
-              >
-            </li>
-            <li>
-              <a
-                href="privacy.html"
-                style="color: #fff; text-decoration: none"
-                >Privacy Policy</a
-              >
-            </li>
-          </ul>
-        </div>
+            ">
+          <li>
+            <a href="./blog.html" style="color: #fff; text-decoration: none">Blog</a>
+          </li>
+          <li>
+            <a href="./testimonial.html" style="color: #fff; text-decoration: none">Testimonial</a>
+          </li>
+          <li>
+            <a href="./faq.html" style="color: #fff; text-decoration: none">FAQs</a>
+          </li>
+          <li>
+            <a href="./terms.html" style="color: #fff; text-decoration: none">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="privacy.html" style="color: #fff; text-decoration: none">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
 
-        <!-- Social Media -->
-        <div
-          class="footer-section social-icons"
-          style="flex: 1; min-width: 200px"
-        >
-          <h3>Follow Us</h3>
-          <div
-            style="
+      <!-- Social Media -->
+      <div class="footer-section social-icons" style="flex: 1; min-width: 200px">
+        <h3>Follow Us</h3>
+        <div style="
               display: flex;
               justify-content: center;
               gap: 10px;
               font-size: 20px;
-            "
-          >
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              style="color: #fff; text-decoration: none"
-            >
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              style="color: #fff; text-decoration: none"
-            >
-              <i class="fab fa-x-twitter"></i>
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              style="color: #fff; text-decoration: none"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              style="color: #fff; text-decoration: none"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-          <!--payment options-->
-          <div class="payments">
-            <h3>
-              <i class="fa-solid fa-credit-card" style="color: #d6a52b; margin-right: 8px; padding-top: 15px;"></i>we accept</h3>
-            <a href="https://www.apple.com/apple-pay/" target="_blank" style="color:#fff;"><i class="fab fa-apple-pay" style="font-size: 40px;"></i></a>
-            <a href="https://pay.google.com/intl/en_in/about/" style="color:#fff;"><i class="fa-brands fa-google-pay" style="font-size: 40px;"></i></a>
-            <a href="https://redemption.mastercard.com/#/user/login?language=en-US" style="color:#fff;"><i class="fa-brands fa-cc-mastercard" style="font-size: 30px;"></i></a>
-            <a href="https://www.visa.com.au/en_au/account/login" style="color:#fff;"><i class="fa-brands fa-cc-visa" style="font-size: 30px;"></i></a>
-      </div>
+            ">
+          <a href="https://facebook.com" target="_blank" style="color: #fff; text-decoration: none">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" style="color: #fff; text-decoration: none">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" style="color: #fff; text-decoration: none">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" style="color: #fff; text-decoration: none">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
+        <!--payment options-->
+        <div class="payments">
+          <h3>
+            <i class="fa-solid fa-credit-card" style="color: #d6a52b; margin-right: 8px; padding-top: 15px;"></i>we
+            accept
+          </h3>
+          <a href="https://www.apple.com/apple-pay/" target="_blank" style="color:#fff;"><i class="fab fa-apple-pay"
+              style="font-size: 40px;"></i></a>
+          <a href="https://pay.google.com/intl/en_in/about/" style="color:#fff;"><i class="fa-brands fa-google-pay"
+              style="font-size: 40px;"></i></a>
+          <a href="https://redemption.mastercard.com/#/user/login?language=en-US" style="color:#fff;"><i
+              class="fa-brands fa-cc-mastercard" style="font-size: 30px;"></i></a>
+          <a href="https://www.visa.com.au/en_au/account/login" style="color:#fff;"><i class="fa-brands fa-cc-visa"
+              style="font-size: 30px;"></i></a>
+        </div>
+      </div>
 
-        <!-- Subscribe Section -->
-        <div
-          class="footer-section subscribe-section"
-          style="flex: 1; min-width: 200px"
-        >
-          <h3>Subscribe to Our Newsletter</h3>
-          <form
-            action="#"
-            method="POST"
-            style="
+      <!-- Subscribe Section -->
+      <div class="footer-section subscribe-section" style="flex: 1; min-width: 200px">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form action="#" method="POST" style="
               display: flex;
               flex-direction: column;
               gap: 10px;
               align-items: center;
-            "
-          >
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-            />
-            </button>
-            <button type="submit" class="subscribe-button">Subscribe</button>
-          </form>
-        </div>
+            ">
+          <input id="email" type="email" name="email" placeholder="Enter your email" />
+          </button>
+          <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
       </div>
+    </div>
 
-      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #444" />
-      <div class="imf">
-        <img src="./AJIVIKA2.svg" alt="" height="58px">
-        <div style="text-align: center; font-size: 14px; color: #aaa">
-          <p>&copy; 2024 Ajivika™. All rights reserved.</p>
-          <p>Designed and developed with ❤️ by the Ajivika Team.</p>
-        </div>
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #444" />
+    <div class="imf">
+      <img src="./AJIVIKA2.svg" alt="" height="58px">
+      <div style="text-align: center; font-size: 14px; color: #aaa">
+        <p>&copy; 2024 Ajivika™. All rights reserved.</p>
+        <p>Designed and developed with ❤️ by the Ajivika Team.</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <style>
-      #cursor {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        pointer-events: none;
-        transition: transform 0.15s ease-out;
-      }
-    </style>
-    
-    <script>
-      const customCursor = document.querySelector('#cursor');
-      document.addEventListener('mousemove', (e) => {
-          const x = e.clientX;
-          const y = e.clientY;
-          customCursor.style.transform = `translate(${x}px, ${y}px)`;
-      });
-    </script>
+  <style>
+    #cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: transform 0.15s ease-out;
+    }
+  </style>
 
-    <script>
-      // hamburger menu js
-      function toggleMenu() {
-          const navLinks = document.querySelector('.nav-links');
-          navLinks.classList.toggle('active');
-      }
+  <script>
+    const customCursor = document.querySelector('#cursor');
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      customCursor.style.transform = `translate(${x}px, ${y}px)`;
+    });
   </script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-      const themeToggle = document.querySelector('.theme-switch__checkbox');
-      const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark');
-            document.body.classList.remove('light');
-            themeToggle.checked = true;
-        } else {
-            document.body.classList.add('light');
-            document.body.classList.remove('dark');
-        }
+  <script src="navbar.js"></script>
 
-    themeToggle.addEventListener('change', () => {
-      if (themeToggle.checked) {
-          document.body.classList.add('dark');
-          document.body.classList.remove('light');
-          localStorage.setItem('theme', 'dark');
+  <!-- Top scroll button -->
+  <button id="scrollBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up fa-lg"></i>
+  </button>
+
+  <script>
+    // Get the button element
+    const scrollBtn = document.getElementById('scrollBtn');
+
+    // Show the button when the user scrolls down 100px from the top
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollBtn.style.display = "block";
       } else {
-          document.body.classList.remove('dark');
-          document.body.classList.add('light');
-          localStorage.setItem('theme', 'light');
+        scrollBtn.style.display = "none";
       }
-        });
-    });
-    </script>
+    };
 
-    <!-- Top scroll button -->
-    <button id="scrollBtn" title="Go to top">
-      <i class="fa-solid fa-arrow-up fa-lg"></i>
-    </button>
+    // Scroll to the top of the page when the button is clicked
+    scrollBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
 
-    <script>
-      // Get the button element
-      const scrollBtn = document.getElementById('scrollBtn');
-  
-      // Show the button when the user scrolls down 100px from the top
-      window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollBtn.style.display = "block";
-        } else {
-            scrollBtn.style.display = "none";
-        }
-      };
-  
-      // Scroll to the top of the page when the button is clicked
-      scrollBtn.onclick = function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-      };
-  
-    </script>
+  </script>
 
-    <script>
-      function addItem(type, listId, inputId) {
-        const input = document.getElementById(inputId);
-        const list = document.getElementById(listId);
-      
-        if (input.value.trim() !== "") {
-          const li = document.createElement("li");
-          const span = document.createElement("span");
-          span.className = "item-text";
-          span.textContent = input.value.trim();  // Ensure no extra spaces or characters are added
-          li.appendChild(span);
-      
-          // Add the remove button as a child of the li element
-          const removeBtn = document.createElement("span");
-          removeBtn.className = "remove-btn";
-          removeBtn.textContent = "❌";
-          removeBtn.onclick = function () {
-            removeItem(removeBtn);
-          };
-          li.appendChild(removeBtn);
-      
-          // Append the li to the list
-          list.appendChild(li);
-      
-          input.value = ""; // Clear input field
-        }
-      }     
-      
-      function addExperience() {
-        const jobTitle = document.getElementById("job-title");
-        const companyName = document.getElementById("company-name");
-        const jobDuration = document.getElementById("job-duration");
-        const jobDescription = document.getElementById("job-description");
-        const list = document.getElementById("experience-list");
-      
-        if (jobTitle.value.trim() !== "" && companyName.value.trim() !== "" && jobDuration.value.trim() !== "" && jobDescription.value.trim() !== "") {
-          const li = document.createElement("li");
-          li.innerHTML = `<strong class="item-text">${jobTitle.value}</strong> at ${companyName.value} (${jobDuration.value})<br>${jobDescription.value} 
+  <script>
+    function addItem(type, listId, inputId) {
+      const input = document.getElementById(inputId);
+      const list = document.getElementById(listId);
+
+      if (input.value.trim() !== "") {
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        span.className = "item-text";
+        span.textContent = input.value.trim();  // Ensure no extra spaces or characters are added
+        li.appendChild(span);
+
+        // Add the remove button as a child of the li element
+        const removeBtn = document.createElement("span");
+        removeBtn.className = "remove-btn";
+        removeBtn.textContent = "❌";
+        removeBtn.onclick = function () {
+          removeItem(removeBtn);
+        };
+        li.appendChild(removeBtn);
+
+        // Append the li to the list
+        list.appendChild(li);
+
+        input.value = ""; // Clear input field
+      }
+    }
+
+    function addExperience() {
+      const jobTitle = document.getElementById("job-title");
+      const companyName = document.getElementById("company-name");
+      const jobDuration = document.getElementById("job-duration");
+      const jobDescription = document.getElementById("job-description");
+      const list = document.getElementById("experience-list");
+
+      if (jobTitle.value.trim() !== "" && companyName.value.trim() !== "" && jobDuration.value.trim() !== "" && jobDescription.value.trim() !== "") {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong class="item-text">${jobTitle.value}</strong> at ${companyName.value} (${jobDuration.value})<br>${jobDescription.value} 
             <span class="remove-btn" onclick="removeItem(this)">❌</span>`;
-          list.appendChild(li);
-      
-          jobTitle.value = "";
-          companyName.value = "";
-          jobDuration.value = "";
-          jobDescription.value = "";
-        }
+        list.appendChild(li);
+
+        jobTitle.value = "";
+        companyName.value = "";
+        jobDuration.value = "";
+        jobDescription.value = "";
       }
-      
-      function addReference() {
-        const referenceName = document.getElementById("reference-name");
-        const referenceContact = document.getElementById("reference-contact");
-        const list = document.getElementById("references-list");
-      
-        if (referenceName.value.trim() !== "" && referenceContact.value.trim() !== "") {
-          const li = document.createElement("li");
-          li.innerHTML = `<strong class="item-text">${referenceName.value}</strong><br>${referenceContact.value} 
+    }
+
+    function addReference() {
+      const referenceName = document.getElementById("reference-name");
+      const referenceContact = document.getElementById("reference-contact");
+      const list = document.getElementById("references-list");
+
+      if (referenceName.value.trim() !== "" && referenceContact.value.trim() !== "") {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong class="item-text">${referenceName.value}</strong><br>${referenceContact.value} 
             <span class="remove-btn" onclick="removeItem(this)">❌</span>`;
-          list.appendChild(li);
-      
-          referenceName.value = "";
-          referenceContact.value = "";
-        }
+        list.appendChild(li);
+
+        referenceName.value = "";
+        referenceContact.value = "";
       }
-      
-      function addProject() {
-        const projectTitle = document.getElementById('project-title').value;
-        const projectDescription = document.getElementById('project-description').value;
-        const projectDuration = document.getElementById('project-duration').value;
-        const projectLink = document.getElementById('project-link').value;
-      
-        if (!projectTitle || !projectDescription || !projectDuration) {
-          alert('Please fill in all required project fields.');
-          return;
-        }
-      
-        const projectsList = document.getElementById('projects-list');
-        const li = document.createElement('li');
-      
-        // Create HTML content for the project item
-        let projectHTML = `
+    }
+
+    function addProject() {
+      const projectTitle = document.getElementById('project-title').value;
+      const projectDescription = document.getElementById('project-description').value;
+      const projectDuration = document.getElementById('project-duration').value;
+      const projectLink = document.getElementById('project-link').value;
+
+      if (!projectTitle || !projectDescription || !projectDuration) {
+        alert('Please fill in all required project fields.');
+        return;
+      }
+
+      const projectsList = document.getElementById('projects-list');
+      const li = document.createElement('li');
+
+      // Create HTML content for the project item
+      let projectHTML = `
           <strong>${projectTitle}</strong> (${projectDuration})<br />
           ${projectDescription}
         `;
-      
-        // Add link if provided
-        if (projectLink) {
-          projectHTML += `<br /><a href="${projectLink}" target="_blank" style="color: #3498db;">View Project</a>`;
-        }
-      
-        li.innerHTML = projectHTML;
-        projectsList.appendChild(li);
-      
-        // Clear input fields
-        document.getElementById('project-title').value = '';
-        document.getElementById('project-description').value = '';
-        document.getElementById('project-duration').value = '';
-        document.getElementById('project-link').value = '';
-      }
-      
-      function removeItem(element) {
-        // Remove the list item from the DOM
-        element.parentElement.remove();
-      }
-      
-    </script>
 
-<script>
-      function validateForm() {
-        let requiredFields = document.querySelectorAll(".resume-creator-input[required], .resume-creator-textarea[required]");
-        let isValid = true;
-      
-        requiredFields.forEach(field => {
-          if (!field.value.trim()) {
-            isValid = false;
-            field.style.border = "2px solid red"; // Highlight empty fields
-          } else {
-            field.style.border = "1px solid #ccc"; // Reset border if filled
-          }
-        });
-      
-        if (!isValid) {
-          alert("Please fill all the required (*) fields before downloading.");
-          return false;
-        }
-        return true;
+      // Add link if provided
+      if (projectLink) {
+        projectHTML += `<br /><a href="${projectLink}" target="_blank" style="color: #3498db;">View Project</a>`;
       }
 
-      function generatePDF() {
-        if (!validateForm()) {
-      return;
+      li.innerHTML = projectHTML;
+      projectsList.appendChild(li);
+
+      // Clear input fields
+      document.getElementById('project-title').value = '';
+      document.getElementById('project-description').value = '';
+      document.getElementById('project-duration').value = '';
+      document.getElementById('project-link').value = '';
     }
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
-      
-        // Fetching input values
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const degree = document.getElementById("degree").value;
-        const institution = document.getElementById("institution").value;
-        const major = document.getElementById("major").value;
-        const startYear = document.getElementById("startYear").value;
-        const endYear = document.getElementById("endYear").value;
-        const tenthP = document.getElementById("10th").value;
-        const tenthC = document.getElementById("10ths").value;
-        const twelfthP = document.getElementById("12th").value;
-        const twelfthC = document.getElementById("12ths").value;
-      
-        // Extracting list items (skills, certifications, etc.)
-        const skills = Array.from(document.querySelectorAll("#skills-list li span.item-text")).map(item => item.textContent);
-        const certifications = Array.from(document.querySelectorAll("#certifications-list li span.item-text")).map(item => item.textContent);
-        const languages = Array.from(document.querySelectorAll("#languages-list li span.item-text")).map(item => item.textContent);
-        const workExperience = Array.from(document.querySelectorAll("#experience-list li span.item-text")).map(item => item.textContent);
-        const references = Array.from(document.querySelectorAll("#references-list li span.item-text")).map(item => item.textContent);
-        const projects = Array.from(document.querySelectorAll("#projects-list li span.item-text")).map(item => item.textContent);
-        const achievements = Array.from(document.querySelectorAll("#achievements-list li span.item-text")).map(item => item.textContent);
-      
-        // Background Styling
-        doc.setFillColor(255, 252, 230);
-        doc.rect(0, 0, 105, 297, "F");
-        doc.setFillColor(255, 255, 255);
-        doc.rect(105, 0, 105, 297, "F");
-      
-        // Name Box
-        doc.setFontSize(24);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont("Times", "bold");
-        doc.text(name, 105, 35, { align: "center" });
-      
-        // Contact & Education Details
-        doc.setFontSize(12);
-        doc.setFont("Times", "bold");
-        let contactStartY = 50;
-        let leftX = 10, rightX = 125;
-      
-        doc.text("Email:", leftX, contactStartY);
-        doc.text(email, leftX + 40, contactStartY);
-        doc.text("Phone:", rightX, contactStartY);
-        doc.text(phone, rightX + 40, contactStartY);
-      
-        doc.text("Degree:", leftX, contactStartY + 10);
-        doc.text(degree, leftX + 40, contactStartY + 10);
-        doc.text("Institution:", rightX, contactStartY + 10);
-        doc.text(institution, rightX + 40, contactStartY + 10);
-      
-        doc.text("10th %:", leftX, contactStartY + 20);
-        doc.text(tenthP, leftX + 40, contactStartY + 20);
-        doc.text("10th School:", rightX, contactStartY + 20);
-        doc.text(tenthC, rightX + 40, contactStartY + 20);
-      
-        doc.text("12th %:", leftX, contactStartY + 30);
-        doc.text(twelfthP, leftX + 40, contactStartY + 30);
-        doc.text("12th School:", rightX, contactStartY + 30);
-        doc.text(twelfthC, rightX + 40, contactStartY + 30);
-      
-        // Draw a separator line
-        doc.setDrawColor(139, 69, 19);
-        doc.setLineWidth(0.5);
-        doc.line(10, contactStartY + 40, 200, contactStartY + 40);
-      
-        // Sections Formatting
-        function addSection(title, items, yOffset) {
-          doc.setFontSize(16);
-          doc.setFont("Times", "bold");
-          doc.text(title, 10, yOffset);
-          doc.setFontSize(12);
-          doc.setFont("Times", "normal");
-          items.forEach((item, index) => {
-            doc.text(`- ${item}`, 10, yOffset + 10 + index * 8);
-          });
-          return yOffset + 10 + items.length * 8 + 10;
+
+    function removeItem(element) {
+      // Remove the list item from the DOM
+      element.parentElement.remove();
+    }
+
+  </script>
+
+  <script>
+    function validateForm() {
+      let requiredFields = document.querySelectorAll(".resume-creator-input[required], .resume-creator-textarea[required]");
+      let isValid = true;
+
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          isValid = false;
+          field.style.border = "2px solid red"; // Highlight empty fields
+        } else {
+          field.style.border = "1px solid #ccc"; // Reset border if filled
         }
-      
-        let sectionY = contactStartY + 50;
-        sectionY = addSection("Skills", skills, sectionY);
-        sectionY = addSection("Work Experience", workExperience, sectionY);
-        sectionY = addSection("Certifications", certifications, sectionY);
-        sectionY = addSection("Languages", languages, sectionY);
-        sectionY = addSection("Projects", projects, sectionY); 
-        sectionY = addSection("Achievements", achievements, sectionY); 
-        sectionY = addSection("References", references, sectionY);
-      
-        // Footer
-        doc.setFontSize(10);
-        doc.setFont("Times", "normal");
-        doc.text("Generated by Resume Creator", 105, 290, { align: "center" });
-      
-        // Save PDF
-        doc.save("resume.pdf");
+      });
+
+      if (!isValid) {
+        alert("Please fill all the required (*) fields before downloading.");
+        return false;
       }
-    </script>
+      return true;
+    }
 
-    <script>
-      document.querySelector('.image-button1').addEventListener('click', function() {
-        window.location.href = 'index.html';
-      });    
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    function generatePDF() {
+      if (!validateForm()) {
+        return;
+      }
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
 
-  </body>
+      // Fetching input values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const degree = document.getElementById("degree").value;
+      const institution = document.getElementById("institution").value;
+      const major = document.getElementById("major").value;
+      const startYear = document.getElementById("startYear").value;
+      const endYear = document.getElementById("endYear").value;
+      const tenthP = document.getElementById("10th").value;
+      const tenthC = document.getElementById("10ths").value;
+      const twelfthP = document.getElementById("12th").value;
+      const twelfthC = document.getElementById("12ths").value;
+
+      // Extracting list items (skills, certifications, etc.)
+      const skills = Array.from(document.querySelectorAll("#skills-list li span.item-text")).map(item => item.textContent);
+      const certifications = Array.from(document.querySelectorAll("#certifications-list li span.item-text")).map(item => item.textContent);
+      const languages = Array.from(document.querySelectorAll("#languages-list li span.item-text")).map(item => item.textContent);
+      const workExperience = Array.from(document.querySelectorAll("#experience-list li span.item-text")).map(item => item.textContent);
+      const references = Array.from(document.querySelectorAll("#references-list li span.item-text")).map(item => item.textContent);
+      const projects = Array.from(document.querySelectorAll("#projects-list li span.item-text")).map(item => item.textContent);
+      const achievements = Array.from(document.querySelectorAll("#achievements-list li span.item-text")).map(item => item.textContent);
+
+      // Background Styling
+      doc.setFillColor(255, 252, 230);
+      doc.rect(0, 0, 105, 297, "F");
+      doc.setFillColor(255, 255, 255);
+      doc.rect(105, 0, 105, 297, "F");
+
+      // Name Box
+      doc.setFontSize(24);
+      doc.setTextColor(0, 0, 0);
+      doc.setFont("Times", "bold");
+      doc.text(name, 105, 35, { align: "center" });
+
+      // Contact & Education Details
+      doc.setFontSize(12);
+      doc.setFont("Times", "bold");
+      let contactStartY = 50;
+      let leftX = 10, rightX = 125;
+
+      doc.text("Email:", leftX, contactStartY);
+      doc.text(email, leftX + 40, contactStartY);
+      doc.text("Phone:", rightX, contactStartY);
+      doc.text(phone, rightX + 40, contactStartY);
+
+      doc.text("Degree:", leftX, contactStartY + 10);
+      doc.text(degree, leftX + 40, contactStartY + 10);
+      doc.text("Institution:", rightX, contactStartY + 10);
+      doc.text(institution, rightX + 40, contactStartY + 10);
+
+      doc.text("10th %:", leftX, contactStartY + 20);
+      doc.text(tenthP, leftX + 40, contactStartY + 20);
+      doc.text("10th School:", rightX, contactStartY + 20);
+      doc.text(tenthC, rightX + 40, contactStartY + 20);
+
+      doc.text("12th %:", leftX, contactStartY + 30);
+      doc.text(twelfthP, leftX + 40, contactStartY + 30);
+      doc.text("12th School:", rightX, contactStartY + 30);
+      doc.text(twelfthC, rightX + 40, contactStartY + 30);
+
+      // Draw a separator line
+      doc.setDrawColor(139, 69, 19);
+      doc.setLineWidth(0.5);
+      doc.line(10, contactStartY + 40, 200, contactStartY + 40);
+
+      // Sections Formatting
+      function addSection(title, items, yOffset) {
+        doc.setFontSize(16);
+        doc.setFont("Times", "bold");
+        doc.text(title, 10, yOffset);
+        doc.setFontSize(12);
+        doc.setFont("Times", "normal");
+        items.forEach((item, index) => {
+          doc.text(`- ${item}`, 10, yOffset + 10 + index * 8);
+        });
+        return yOffset + 10 + items.length * 8 + 10;
+      }
+
+      let sectionY = contactStartY + 50;
+      sectionY = addSection("Skills", skills, sectionY);
+      sectionY = addSection("Work Experience", workExperience, sectionY);
+      sectionY = addSection("Certifications", certifications, sectionY);
+      sectionY = addSection("Languages", languages, sectionY);
+      sectionY = addSection("Projects", projects, sectionY);
+      sectionY = addSection("Achievements", achievements, sectionY);
+      sectionY = addSection("References", references, sectionY);
+
+      // Footer
+      doc.setFontSize(10);
+      doc.setFont("Times", "normal");
+      doc.text("Generated by Resume Creator", 105, 290, { align: "center" });
+
+      // Save PDF
+      doc.save("resume.pdf");
+    }
+  </script>
+
+  <script>
+    document.querySelector('.image-button1').addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });    
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+
 </html>
