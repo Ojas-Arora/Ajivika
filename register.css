@@ -1,14 +1,16 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: var(--body-bg);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   flex-direction: column;
-  overflow: hidden; /* Hide scrollbar for the falling snowflakes */
+  overflow-y: auto;
   position: relative;
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 :root {
@@ -33,7 +35,7 @@ html .dark {
   --h2-color: rgb(255, 187, 52);
   --icon-color: white;
   --left-section: #3e3628;
-  --right-section:#3e3628;
+  --right-section: #3e3628;
   --section-color: white;
   --subtitle-color: yellow;
   --label-color: white;
@@ -41,21 +43,21 @@ html .dark {
 }
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-font-family: Arial, sans-serif;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background-color: var(--body-bg);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--body-bg);
 }
 
-.back-button{
+.back-button {
   position: absolute;
   background-color: transparent;
   border: none;
@@ -66,16 +68,19 @@ background-color: var(--body-bg);
   cursor: pointer;
 }
 
-.theme-converter{
-margin-left: 87%;
-margin-top: 0%;
-margin-bottom: 0%;
-background-color: var(--body-bg);
-color: var(--body-bg) ;
+.theme-converter {
+  margin-left: 87%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  background-color: var(--body-bg);
+  color: var(--body-bg);
 }
+
 @media screen and (max-width: 768px) {
+
   /* Ensure body and container take full height */
-  body, html {
+  body,
+  html {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -88,11 +93,13 @@ color: var(--body-bg) ;
     display: flex;
     flex-direction: column;
     width: 90% !important;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    /* Full viewport height */
     box-shadow: none;
     border-radius: 0;
     justify-content: center;
-    align-items: center; /* Center content */
+    align-items: center;
+    /* Center content */
   }
 
   /* Hide the left section completely */
@@ -108,18 +115,21 @@ color: var(--body-bg) ;
   /* Right section takes full width */
   .right-section {
     padding: 0px 40px 20px 40px !important;
-    width: 100%; /* Take full width */
+    width: 100%;
+    /* Take full width */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .social-btn {
     width: 2.2rem !important;
     height: 2.2rem !important;
   }
+
   .right-section h1 {
-    font-size: 1.5rem !important ;
+    font-size: 1.5rem !important;
     text-align: center;
   }
 
@@ -161,92 +171,92 @@ color: var(--body-bg) ;
 
 
 .container {
-display: flex;
-width: 80%;
-max-width: 1200px;
-background: #fff;
-border-radius: 15px;
-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-overflow: hidden;
-animation: fadeIn 1s ease-in-out;
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .left-section {
-flex: 1;
-background:var(--left-section);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-color: var(--section-color);
-text-align: center;
-padding: 40px;
-animation: slideInLeft 1s ease-in-out;
+  flex: 1;
+  background: var(--left-section);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--section-color);
+  text-align: center;
+  padding: 40px;
+  animation: slideInLeft 1s ease-in-out;
 }
 
 .logo img {
-width: 100px;
-margin-bottom: 20px;
-animation: bounce 2s infinite;
+  width: 100px;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
 }
 
 .logo h2 {
-font-size: 32px;
-margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .logo p {
-font-size: 18px;
-font-weight: 300;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .right-section {
   background: var(--right-section);
-flex: 1;
-padding: 40px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-animation: slideInRight 1s ease-in-out;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideInRight 1s ease-in-out;
 }
 
 .right-section h1 {
-font-size: 28px;
-margin-bottom: 3px;
-color: var(--section-color);
+  font-size: 28px;
+  margin-bottom: 3px;
+  color: var(--section-color);
 }
 
 .subtitle {
-font-size: 16px;
-color: var(--subtitle-color);
-/* color: #666; */
-margin-bottom: 3px;
+  font-size: 16px;
+  color: var(--subtitle-color);
+  /* color: #666; */
+  margin-bottom: 3px;
 }
 
 .signup-form .input-group {
-margin-bottom: 11px;
+  margin-bottom: 11px;
 }
 
 .signup-form .input-group label {
-display: block;
-font-size: 14px;
-margin-bottom: 5px;
-color: var(--label-color)
-/* color: #555; */
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: var(--label-color)
+    /* color: #555; */
 }
 
 .signup-form .input-group input {
-width: 100%;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 8px;
-transition: all 0.3s;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s;
 }
 
 .signup-form .input-group input:focus {
-outline: none;
-border-color: #ffb347;
-box-shadow: 0 0 8px rgba(255, 179, 71, 0.5);
+  outline: none;
+  border-color: #ffb347;
+  box-shadow: 0 0 8px rgba(255, 179, 71, 0.5);
 }
 
 /* Styling for input fields */
@@ -288,7 +298,8 @@ box-shadow: 0 0 8px rgba(255, 179, 71, 0.5);
 /* Hover effect for the sign-up button */
 .signup-btn:hover {
   background-color: #e98d34;
-  box-shadow: 0 4px 12px rgba(255, 217, 64, 0.5); /* Adding shadow on hover */
+  box-shadow: 0 4px 12px rgba(255, 217, 64, 0.5);
+  /* Adding shadow on hover */
 }
 
 /* Focus effect for the sign-up button */
@@ -300,65 +311,73 @@ box-shadow: 0 0 8px rgba(255, 179, 71, 0.5);
 
 /* Active effect for the sign-up button */
 .signup-btn:active {
-  transform: scale(0.98); /* Button shrinks slightly on click */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Slight shadow when clicked */
+  transform: scale(0.98);
+  /* Button shrinks slightly on click */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  /* Slight shadow when clicked */
 }
 
 .login-link {
-margin-top: 10px;
-font-size: 14px;
-text-align: center;
-color: var(--label-color)
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--label-color)
 }
 
 .login-link a {
-color: #ff5733;
-text-decoration: none;
-font-weight: bold;
-transition: color 0.3s ease-in-out;
+  color: #ff5733;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
 .login-link a:hover {
-color: #ffcc33;
+  color: #ffcc33;
 }
 
 /* Animations */
 @keyframes fadeIn {
-from {
-  opacity: 0;
-}
-to {
-  opacity: 1;
-}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInLeft {
-from {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-to {
-  transform: translateX(0);
-  opacity: 1;
-}
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideInRight {
-from {
-  transform: translateX(100%);
-  opacity: 0;
-}
-to {
-  transform: translateX(0);
-  opacity: 1;
-}
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes bounce {
-0%, 100% {
-  transform: translateY(0);
-}
-50% {
-  transform: translateY(-10px);
-}
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }

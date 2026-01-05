@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials</title>
-    <link rel="stylesheet" href="testimonial.css">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="cssfiles/Scroll.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <link rel="stylesheet" href="testimonial.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="cssfiles/Scroll.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <style>
   body.dark .testimonial-container {
@@ -143,11 +140,11 @@
 
   @media (max-width: 768px) {
     .testimonial-container {
-        padding: 1.5rem;
+      padding: 1.5rem;
     }
   }
 
-.testimonial-card {
+  .testimonial-card {
     transition: all 0.3s ease-in-out;
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -168,12 +165,10 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
+    background: linear-gradient(120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
     transition: 0.5s;
   }
 
@@ -198,12 +193,10 @@
   .testimonial-submit-btn {
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(
-      to right,
-      #ff6b6b,
-      #ff9f43,
-      #ffd93d
-    );
+    background-image: linear-gradient(to right,
+        #ff6b6b,
+        #ff9f43,
+        #ffd93d);
     background-size: 300% 100%;
     transition: background-position 0.4s ease;
   }
@@ -224,9 +217,17 @@
   }
 
   @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 
   .pulse-effect:hover {
@@ -238,6 +239,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -268,10 +270,10 @@
   }
 
   .nav-links a {
-  position: relative;
-  padding-bottom: 0; 
-  text-decoration: none; 
-}
+    position: relative;
+    padding-bottom: 0;
+    text-decoration: none;
+  }
 
   .image-button {
     animation: float 3s ease-in-out infinite;
@@ -279,9 +281,17 @@
   }
 
   @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
   }
 
   .image-button:hover {
@@ -315,7 +325,7 @@
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
   }
-  
+
   :root {
     --primary-gradient: linear-gradient(135deg, #ff6b6b, #ff9f43, #ffd93d);
     --secondary-gradient: linear-gradient(135deg, #6c5ce7, #a66efa, #d8b4fe);
@@ -329,11 +339,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-      linear-gradient(45deg, rgba(255,107,107,0.05) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(255,159,67,0.05) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(255,217,61,0.05) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(108,92,231,0.05) 75%);
+    background:
+      linear-gradient(45deg, rgba(255, 107, 107, 0.05) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(255, 159, 67, 0.05) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255, 217, 61, 0.05) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(108, 92, 231, 0.05) 75%);
     background-size: 20px 20px;
     z-index: -1;
     opacity: 0.3;
@@ -358,7 +368,9 @@
   }
 
   @keyframes rotate-border {
-    100% { transform: rotate(360deg); }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .testimonial-container {
@@ -393,8 +405,16 @@
   }
 
   @keyframes sparkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; transform: scale(1.2); }
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.3;
+      transform: scale(1.2);
+    }
   }
 
   .testimonial-submit-btn {
@@ -421,7 +441,7 @@
   .testimonial-submit-btn:hover {
     filter: hue-rotate(45deg);
     transform: scale(1.05) skewX(-5deg);
-    box-shadow: 0 0 25px rgba(255,107,107,0.5);
+    box-shadow: 0 0 25px rgba(255, 107, 107, 0.5);
   }
 
   .star {
@@ -430,8 +450,17 @@
   }
 
   @keyframes star-pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.8; }
+
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
   }
 
   .main-heading {
@@ -443,17 +472,22 @@
   }
 
   @keyframes text-shine {
-    from { background-position: 0% 50%; }
-    to { background-position: 100% 50%; }
+    from {
+      background-position: 0% 50%;
+    }
+
+    to {
+      background-position: 100% 50%;
+    }
   }
 
   .avatar {
-    filter: drop-shadow(0 0 5px rgba(255,159,67,0.3));
+    filter: drop-shadow(0 0 5px rgba(255, 159, 67, 0.3));
     transition: all 0.5s ease;
   }
 
   .testimonial-card:hover .avatar {
-    filter: drop-shadow(0 0 15px rgba(255,159,67,0.5));
+    filter: drop-shadow(0 0 15px rgba(255, 159, 67, 0.5));
     transform: rotate(5deg) scale(1.1);
   }
 
@@ -463,16 +497,15 @@
   }
 
   .social-icons a:hover {
-    filter: 
-      drop-shadow(0 0 5px currentColor)
-      hue-rotate(45deg);
+    filter:
+      drop-shadow(0 0 5px currentColor) hue-rotate(45deg);
     transform: scale(1.2);
   }
 
   #scrollButton {
     background: var(--primary-gradient);
     border: none;
-    box-shadow: 0 0 15px rgba(255,107,107,0.3);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
   }
 
   #scrollButton:hover .arrow {
@@ -481,8 +514,15 @@
   }
 
   @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
   }
 
   body.dark .testimonial-card::before {
@@ -496,204 +536,127 @@
   body.dark .social-icons a {
     color: #ffd93d !important;
   }
-
-
-
 </style>
+
 <body>
-    <div id="cursor"></div>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="logo">
-        <button class="image-button1">
-          <img src="./AJIVIKA2.svg" alt="Image Button1" class="image-icon1" />
-        </button>
+  <div id="cursor"></div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="./AJIVIKA2.svg" alt="Ajivika Logo">
+    </a>
+
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="./index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+      <li><a href="./about.html"><i class="fas fa-address-card"></i> <span>About Us</span></a></li>
+      <li><a href="./contact.html"><i class="fas fa-envelope"></i> <span>Contact Us</span></a></li>
+      <li><a href="./pricing.html"><i class="fas fa-comments"></i> <span>Go Pro</span></a></li>
+      <li><a href="./contributors/contributor.html"><i class="fas fa-users"></i> <span>Contributors</span></a></li>
+      <li><a href="./register.html"><i class="fas fa-user-plus"></i> <span>Register</span></a></li>
+
+      <li>
+        <button class="translate-button" onclick="toggleTranslate()">🌐</button>
+        <div id="google_translate_element"
+          style="position: absolute; top: 60px; right: 0; display: none; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+      </li>
+
+      <li>
+        <label class="theme-switch">
+          <input type="checkbox" class="theme-switch__checkbox">
+          <div class="theme-switch__container">
+            <div class="theme-switch__clouds"></div>
+            <div class="theme-switch__stars-container">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </li>
+    </ul>
+  </nav>
+
+  <button class="back-button" onclick="window.history.back()">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+
+
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="flex flex-col items-center">
+        <div class="text-center">
+          <h2 class="main-heading">Our happy clients say about us</h2>
+        </div>
+
+        <div class="cta-container">
+          <a href="#" class="cta-link">Check all <span id="testimonialCount">0</span> reviews</a>
+        </div>
+
+        <div class="relative-container">
+          <div class="background-gradient"></div>
+
+          <div class="grid-container" id="testimonialGrid">
+            <!-- Dynamically populated testimonials will appear here -->
+          </div>
+        </div>
       </div>
-      <!-- Floating Image Button -->
+    </div>
+  </section>
 
-      <!-- hamburger menu -->
-      <button class="hamburger" onclick="toggleMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <!-- Navigation Links -->
-      <ul class="nav-links">
-        <li>
-          <a href="./index.html"
-            ><i class="fas fa-home"></i><span>Home</span></a
-          >
-        </li>
-        <li>
-          <a href="./about.html"
-            ><i class="fas fa-address-card"></i> <span>About Us</span></a
-          >
-        </li>
-        <li>
-          <a href="./contact.html"
-            ><i class="fas fa-envelope"></i> <span>Contact Us</span></a
-          >
-        </li>
-        <li>
-          <a href="./pricing.html"
-            ><i class="fas fa-comments"></i><span>Go Pro</span></a
-          >
-        </li>
-        <li>
-          <a href="./contributors/contributor.html"
-            ><i class="fas fa-users"></i><span>Contributors</span></a
-          >
-        </li>
-        <!-- <li><a href="./login.html"><i class="fas fa-sign-in-alt"></i><span>Log In</span></a></li> -->
-        <li>
-          <a href="./register.html"
-            ><i class="fas fa-user-plus"></i> <span>Register</span></a
-          >
-        </li>
-        <li>
-          <button class="translate-button" onclick="toggleTranslate()">
-            🌐
-          </button>
-          <div id="google_translate_element" style="display: none;"></div>
-        </li>
-        <li>
-          <label class="theme-switch">
-            <input type="checkbox" class="theme-switch__checkbox" />
-            <div class="theme-switch__container">
-              <div class="theme-switch__clouds"></div>
-              <div class="theme-switch__stars-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 144 55"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <div class="theme-switch__circle-container">
-                <div class="theme-switch__sun-moon-container">
-                  <div class="theme-switch__moon">
-                    <div class="theme-switch__spot"></div>
-                    <div class="theme-switch__spot"></div>
-                    <div class="theme-switch__spot"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-        </li>
-      </ul>
-    </nav>
-    <!-- Home Page Content -->
+  <!-- Add Testimonial Form -->
+  <section class="add-testimonial-section">
+    <div class="testimonial-container">
+      <form id="testimonialForm" class="testimonial-form">
+        <h3 class="testimonial-form-title">Add Your Testimonial</h3>
 
-    <script>
-        // hamburger menu js
-        function toggleMenu() {
-          const navLinks = document.querySelector(".nav-links");
-          navLinks.classList.toggle("active");
-        }
-      </script>
-  
-      <!-- Google Translate Script -->
-      <!-- <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-  
-      <script>
-        // Initialize Google Translate
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement(
-            {
-              pageLanguage: "en",
-              includedLanguages: "en,hi,es,fr,de,it,ja,zh-CN",
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false,
-            },
-            "google_translate_element"
-          );
-        }
-  
-        // Show or hide the Google Translate options
-        function toggleTranslate() {
-          const translateElement = document.getElementById(
-            "google_translate_element"
-          );
-          if (
-            translateElement.style.display === "none" ||
-            translateElement.style.display === ""
-          ) {
-            translateElement.style.display = "block";
-          } else {
-            translateElement.style.display = "none";
-          }
-        }
-      </script>
-      <button class="back-button" onclick="window.history.back();">
-        <i class="fas fa-arrow-left"></i>
-      </button>
+        <label for="name" class="testimonial-label">Name:</label>
+        <input type="text" id="name" name="name" class="testimonial-input" required />
+
+        <label for="profession" class="testimonial-label">Profession:</label>
+        <input type="text" id="profession" name="profession" class="testimonial-input" required />
+
+        <label for="review" class="testimonial-label">Review:</label>
+        <textarea id="review" name="review" class="testimonial-textarea" required></textarea>
+
+        <label for="stars" class="testimonial-label">Rating:</label>
+        <select id="stars" name="stars" class="testimonial-select" required>
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+
+        <label for="image" class="testimonial-label">Upload Image (optional):</label>
+        <input type="file" id="image" name="image" class="testimonial-file" accept="image/*" />
+
+        <button type="submit" class="testimonial-submit-btn">Submit Testimonial</button>
+      </form>
+    </div>
+  </section>
 
 
-    <section class="testimonial-section">
-        <div class="container">
-            <div class="flex flex-col items-center">
-                <div class="text-center">
-                    <h2 class="main-heading">Our happy clients say about us</h2>
-                </div>
-    
-                <div class="cta-container">
-                    <a href="#" class="cta-link">Check all <span id="testimonialCount">0</span> reviews</a>
-                </div>
-    
-                <div class="relative-container">
-                    <div class="background-gradient"></div>
-    
-                    <div class="grid-container" id="testimonialGrid">
-                        <!-- Dynamically populated testimonials will appear here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-      <!-- Add Testimonial Form -->
-      <section class="add-testimonial-section">
-        <div class="testimonial-container">
-            <form id="testimonialForm" class="testimonial-form">
-                <h3 class="testimonial-form-title">Add Your Testimonial</h3>
-                
-                <label for="name" class="testimonial-label">Name:</label>
-                <input type="text" id="name" name="name" class="testimonial-input" required />
-    
-                <label for="profession" class="testimonial-label">Profession:</label>
-                <input type="text" id="profession" name="profession" class="testimonial-input" required />
-    
-                <label for="review" class="testimonial-label">Review:</label>
-                <textarea id="review" name="review" class="testimonial-textarea" required></textarea>
-    
-                <label for="stars" class="testimonial-label">Rating:</label>
-                <select id="stars" name="stars" class="testimonial-select" required>
-                    <option value="1">1 Star</option>
-                    <option value="2">2 Stars</option>
-                    <option value="3">3 Stars</option>
-                    <option value="4">4 Stars</option>
-                    <option value="5">5 Stars</option>
-                </select>
-    
-                <label for="image" class="testimonial-label">Upload Image (optional):</label>
-                <input type="file" id="image" name="image" class="testimonial-file" accept="image/*" />
-        
-                <button type="submit" class="testimonial-submit-btn">Submit Testimonial</button>
-            </form>
-        </div>
-      </section>
-  
-
-    <!-- Footer -->
-    <footer style="background-color: #222; color: #fff; padding:42px 40px 0px 35px; width: 100vw; overflow-x: hidden;">
-      <div class="footer-container" style="
+  <!-- Footer -->
+  <footer style="background-color: #222; color: #fff; padding:42px 40px 0px 35px; width: 100vw; overflow-x: hidden;">
+    <div class="footer-container" style="
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -702,307 +665,322 @@
         max-width: 100%;
         margin: 0;
         padding: 0 20px;">
-        <!-- About Section -->
-        <div class="footer-section" style="flex: 1; min-width: 200px">
-          <h3>
-            <i class="fa fa-user" style="color: #d6a52b; margin-right: 8px;"></i> 
-            About Ajivika
-          </h3>
-          
-          <p style="font-size: 14px; line-height: 1.6">
-            Ajivika is your one-stop destination for career growth and learning.
-            From creating professional resumes to applying for top jobs, we
-            provide tools and resources for every career stage.
-          </p>
-        </div>
+      <!-- About Section -->
+      <div class="footer-section" style="flex: 1; min-width: 200px">
+        <h3>
+          <i class="fa fa-user" style="color: #d6a52b; margin-right: 8px;"></i>
+          About Ajivika
+        </h3>
 
-        <!-- Quick Links -->
-        <div class="footer-section quick-link" style="flex: 1; min-width: 200px">
+        <p style="font-size: 14px; line-height: 1.6">
+          Ajivika is your one-stop destination for career growth and learning.
+          From creating professional resumes to applying for top jobs, we
+          provide tools and resources for every career stage.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section quick-link" style="flex: 1; min-width: 200px">
         <h3>
           <i class="fa fa-link" style="color: #d6a52b; margin-right: 8px;"></i>
           Quick Links
         </h3>
-        
-          <ul style="
+
+        <ul style="
               list-style: none;
               padding: 0;
               font-size: 14px;
               line-height:2;
             ">
           <li>
-            <a href="./index.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./index.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-home" style="margin-right: 8px;"></i> Home
             </a>
           </li>
           <li>
-            <a href="./about.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./about.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-info-circle" style="margin-right: 8px;"></i> About Us
             </a>
           </li>
           <li>
-            <a href="./contact.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./contact.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-envelope" style="margin-right: 8px;"></i> Contact
             </a>
           </li>
           <li>
-            <a href="./pricing.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./pricing.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-dollar-sign" style="margin-right: 8px;"></i> Go Pro
             </a>
           </li>
-               
-          </ul>
-        </div>
 
-        <!-- Resources -->
-        <div class="footer-section resources" style="flex: 1; min-width: 200px">
-          <h3>
-            <i class="fa fa-book" style="color: #d6a52b; margin-right: 8px;"></i>
-            Resources
-          </h3>
-          
-          <ul style="
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div class="footer-section resources" style="flex: 1; min-width: 200px">
+        <h3>
+          <i class="fa fa-book" style="color: #d6a52b; margin-right: 8px;"></i>
+          Resources
+        </h3>
+
+        <ul style="
               list-style: none;
               padding: 0;
               font-size: 14px;
               line-height:2;
             ">
           <li>
-            <a href="./blog.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./blog.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-pencil-alt" style="margin-right: 8px;"></i> Blog
             </a>
           </li>
           <li>
-            <a href="./testimonial.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./testimonial.html"
+              style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-comment-dots" style="margin-right: 8px;"></i> Testimonial
             </a>
           </li>
           <li>
-            <a href="./faq.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./faq.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-question-circle" style="margin-right: 8px;"></i> FAQs
             </a>
           </li>
           <li>
-            <a href="./terms.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./terms.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-file-contract" style="margin-right: 8px;"></i> Terms &amp; Conditions
             </a>
           </li>
           <li>
-            <a href="./privacy.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
+            <a href="./privacy.html" style="color: rgb(255, 255, 255); text-decoration: none; transition: color 0.3s;"
+              onmouseover="this.style.color='#d6a52b'" onmouseout="this.style.color='#fff'">
               <i class="fa fa-user-secret" style="margin-right: 8px;"></i> Privacy Policy
             </a>
           </li>
-          
-          </ul>
-        </div>
 
-        <!-- Social Media -->
-        <div class="footer-section social-icons" style="flex: 1; min-width: 200px">
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section social-icons" style="flex: 1; min-width: 200px">
         <h3>
           <i class="fa fa-hashtag" style="color: #d6a52b; margin-right: 8px;"></i>
           Follow Us
         </h3>
-        
-          <div style="
+
+        <div style="
               display: flex;
               justify-content: center;
               gap: 20px;
               font-size: 20px;
             ">
-            <a href="https://facebook.com" target="_blank" style="color: #fff; text-decoration: none">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" style="color: #fff; text-decoration: none">
+          <a href="https://facebook.com" target="_blank" style="color: #fff; text-decoration: none">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" style="color: #fff; text-decoration: none">
             <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" style="color: #fff; text-decoration: none">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" style="color: #fff; text-decoration: none">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-          <!--payment options-->
-          <div class="payments">
-            <h3>
-              <i class="fa-solid fa-credit-card" style="color: #d6a52b; margin-right: 8px; padding-top: 15px;"></i>We Accept</h3>
-              <div class="payment-icons">
-            <a href="https://www.apple.com/apple-pay/" target="_blank" style="color:#fff;"><i class="fab fa-apple-pay" style="font-size: 40px;"></i></a>
-            <a href="https://pay.google.com/intl/en_in/about/" style="color:#fff;"><i class="fa-brands fa-google-pay" style="font-size: 40px;"></i></a>
-            <a href="https://redemption.mastercard.com/#/user/login?language=en-US" style="color:#fff;"><i class="fa-brands fa-cc-mastercard" style="font-size: 30px;"></i></a>
-            <a href="https://www.visa.com.au/en_au/account/login" style="color:#fff;"><i class="fa-brands fa-cc-visa" style="font-size: 30px;"></i></a>
-          </div>
+          </a>
+          <a href="https://linkedin.com" target="_blank" style="color: #fff; text-decoration: none">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" style="color: #fff; text-decoration: none">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <!--payment options-->
+        <div class="payments">
+          <h3>
+            <i class="fa-solid fa-credit-card" style="color: #d6a52b; margin-right: 8px; padding-top: 15px;"></i>We
+            Accept
+          </h3>
+          <div class="payment-icons">
+            <a href="https://www.apple.com/apple-pay/" target="_blank" style="color:#fff;"><i class="fab fa-apple-pay"
+                style="font-size: 40px;"></i></a>
+            <a href="https://pay.google.com/intl/en_in/about/" style="color:#fff;"><i class="fa-brands fa-google-pay"
+                style="font-size: 40px;"></i></a>
+            <a href="https://redemption.mastercard.com/#/user/login?language=en-US" style="color:#fff;"><i
+                class="fa-brands fa-cc-mastercard" style="font-size: 30px;"></i></a>
+            <a href="https://www.visa.com.au/en_au/account/login" style="color:#fff;"><i class="fa-brands fa-cc-visa"
+                style="font-size: 30px;"></i></a>
           </div>
         </div>
+      </div>
 
-        <!-- Subscribe Section -->
-        <div class="footer-section subscribe-section" style="flex: 1; min-width: 200px">
+      <!-- Subscribe Section -->
+      <div class="footer-section subscribe-section" style="flex: 1; min-width: 200px">
         <h3>
           <i class="fa fa-bell" style="color: #d6a52b; margin-right: 8px;"></i>
           Subscribe to Our Newsletter
         </h3>
-       
-        
-          <form action="#" method="POST" style="
+
+
+        <form action="#" method="POST" style="
               display: flex;
               flex-direction: column;
               gap: 10px;
               align-items: center;
             ">
-            <input id="email" type="email" name="email" placeholder="Enter your email" fdprocessedid="uvpi8e">
-            
-            <button type="submit" class="subscribe-button" fdprocessedid="4jo584">Subscribe</button>
-          </form>
-        </div>
+          <input id="email" type="email" name="email" placeholder="Enter your email" fdprocessedid="uvpi8e">
+
+          <button type="submit" class="subscribe-button" fdprocessedid="4jo584">Subscribe</button>
+        </form>
       </div>
-
-      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #444">
-      <div class="imf" style="text-align: center;">
-        <img src="./AJIVIKA2.svg" alt="" height="58px">
-        <div style="text-align: center; font-size: 14px; color: #aaa;">
-          <p style="margin: 5px 0;">© 2025 Ajivika™. All rights reserved.</p>
-          <p style="margin: 5px 0;">Designed and developed with ❤️ by the Ajivika Team.</p>
-        </div>
-      </div>      
-    </footer>
-  
-  
-      <!-- Floating Chat Button -->
-<a href="chatbot.html">
-  <button class="image-button" fdprocessedid="pv3d3b" style="border-radius: 50%; background-color: #f5a623; padding: 0px; border: none;">
-    <!-- Font Awesome chat icon -->
-    <i class="fas fa-comment-dots" style="border-radius: 50%; background-color: #f5a623; padding: 10px; border: none; font-size: 30px;"></i>
-  </button>
-</a>
-  
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      ></script>
-      <script src="index.js"></script>
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        const themeToggle = document.querySelector('.theme-switch__checkbox');
-        const currentTheme = localStorage.getItem('theme');
-          if (currentTheme === 'dark') {
-              document.body.classList.add('dark');
-              document.body.classList.remove('light');
-              themeToggle.checked = true;
-          } else {
-              document.body.classList.add('light');
-              document.body.classList.remove('dark');
-          }
-
-      themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
-            document.body.classList.add('dark');
-            document.body.classList.remove('light');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.remove('dark');
-            document.body.classList.add('light');
-            localStorage.setItem('theme', 'light');
-        }
-          });
-      });
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: 'en',
-            includedLanguages: 'en,hi,es,fr,de,it,ja,zh-CN',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false,
-          },
-          'google_translate_element'
-        );
-      }
-
-      function toggleTranslate() {
-        const translateElement = document.getElementById('google_translate_element');
-        if (translateElement.style.display === 'none' || translateElement.style.display === '') {
-          translateElement.style.display = 'block';
-        } else {
-          translateElement.style.display = 'none';
-        }
-      }
-    </script>
-
-     <!-- Top scroll button -->
-    <div id="scrollButton" class="hidden">
-        <div class="outer-circle">
-            <div class="inner-circle">
-                <div class="arrow">↑</div>
-            </div>
-        </div>
     </div>
- <script src="js/Scroll.js"></script>
-   
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.querySelector('.theme-switch__checkbox');
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'dark') {
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #444">
+    <div class="imf" style="text-align: center;">
+      <img src="./AJIVIKA2.svg" alt="" height="58px">
+      <div style="text-align: center; font-size: 14px; color: #aaa;">
+        <p style="margin: 5px 0;">© 2025 Ajivika™. All rights reserved.</p>
+        <p style="margin: 5px 0;">Designed and developed with ❤️ by the Ajivika Team.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Floating Chat Button -->
+  <a href="chatbot.html">
+    <button class="image-button" fdprocessedid="pv3d3b"
+      style="border-radius: 50%; background-color: #f5a623; padding: 0px; border: none;">
+      <!-- Font Awesome chat icon -->
+      <i class="fas fa-comment-dots"
+        style="border-radius: 50%; background-color: #f5a623; padding: 10px; border: none; font-size: 30px;"></i>
+    </button>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.querySelector('.theme-switch__checkbox');
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme === 'dark') {
         document.body.classList.add('dark');
         document.body.classList.remove('light');
         themeToggle.checked = true;
-    } else {
+      } else {
         document.body.classList.add('light');
         document.body.classList.remove('dark');
+      }
+
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          document.body.classList.add('dark');
+          document.body.classList.remove('light');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark');
+          document.body.classList.add('light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,hi,es,fr,de,it,ja,zh-CN',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false,
+        },
+        'google_translate_element'
+      );
     }
 
-  themeToggle.addEventListener('change', () => {
-    if (themeToggle.checked) {
+    function toggleTranslate() {
+      const translateElement = document.getElementById('google_translate_element');
+      if (translateElement.style.display === 'none' || translateElement.style.display === '') {
+        translateElement.style.display = 'block';
+      } else {
+        translateElement.style.display = 'none';
+      }
+    }
+  </script>
+
+  <!-- Top scroll button -->
+  <div id="scrollButton" class="hidden">
+    <div class="outer-circle">
+      <div class="inner-circle">
+        <div class="arrow">↑</div>
+      </div>
+    </div>
+  </div>
+  <script src="js/Scroll.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.querySelector('.theme-switch__checkbox');
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme === 'dark') {
         document.body.classList.add('dark');
         document.body.classList.remove('light');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.body.classList.remove('dark');
+        themeToggle.checked = true;
+      } else {
         document.body.classList.add('light');
-        localStorage.setItem('theme', 'light');
-    }
+        document.body.classList.remove('dark');
+      }
+
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          document.body.classList.add('dark');
+          document.body.classList.remove('light');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark');
+          document.body.classList.add('light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
     });
-  });
-</script>
+  </script>
 
-<script>
-  document.querySelector('.image-button1').addEventListener('click', function() {
-    window.location.href = 'index.html';
-  });    
-</script>
+  <script>
+    document.querySelector('.image-button1').addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });    
+  </script>
 
-<script>
- const apiEndpoint = 'http://localhost:3000/api/v1/testimonials/all';
- 
- // Function to fetch testimonials data
- async function fetchTestimonials() {
-     try {
-         const response = await fetch(apiEndpoint);
-         const data = await response.json();
-         
-         // Check if data is available
-         if (data && data.length > 0) {
-             // Get the container elements
-             const testimonialGrid = document.getElementById('testimonialGrid');
-             const testimonialCount = document.getElementById('testimonialCount');
- 
-             // Update testimonial count
-             testimonialCount.textContent = data.length;
- 
-             // Clear existing testimonials
-             testimonialGrid.innerHTML = '';
- 
-             // Loop through each testimonial and create the HTML for it
-             data.forEach(testimonial => {
-                 const testimonialCard = document.createElement('div');
-                 testimonialCard.classList.add('testimonial-card', 'pulse-effect');
-                 
-                 // Create the card content
-                 testimonialCard.innerHTML = `
+  <script>
+    const apiEndpoint = 'http://localhost:3000/api/v1/testimonials/all';
+
+    // Function to fetch testimonials data
+    async function fetchTestimonials() {
+      try {
+        const response = await fetch(apiEndpoint);
+        const data = await response.json();
+
+        // Check if data is available
+        if (data && data.length > 0) {
+          // Get the container elements
+          const testimonialGrid = document.getElementById('testimonialGrid');
+          const testimonialCount = document.getElementById('testimonialCount');
+
+          // Update testimonial count
+          testimonialCount.textContent = data.length;
+
+          // Clear existing testimonials
+          testimonialGrid.innerHTML = '';
+
+          // Loop through each testimonial and create the HTML for it
+          data.forEach(testimonial => {
+            const testimonialCard = document.createElement('div');
+            testimonialCard.classList.add('testimonial-card', 'pulse-effect');
+
+            // Create the card content
+            testimonialCard.innerHTML = `
                      <div class="card-content">
                          <div class="rating">
                              ${generateStars(testimonial.stars)} 
@@ -1017,84 +995,87 @@
                        </div>
                      </div>
                  `;
-                 
-                 // Append the card to the container
-                 testimonialGrid.appendChild(testimonialCard);
-             });
-         } else {
-             console.error('No testimonials found.');
-         }
-     } catch (error) {
-         console.error('Error fetching testimonials:', error);
-     }
- }
- 
- // Function to generate star ratings based on the testimonial rating
- function generateStars(rating) {
-     let stars = '';
-     
-     // Generate stars (assumes rating is between 1 and 5)
-     for (let i = 0; i < rating; i++) {
-         stars += `
+
+            // Append the card to the container
+            testimonialGrid.appendChild(testimonialCard);
+          });
+        } else {
+          console.error('No testimonials found.');
+        }
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+      }
+    }
+
+    // Function to generate star ratings based on the testimonial rating
+    function generateStars(rating) {
+      let stars = '';
+
+      // Generate stars (assumes rating is between 1 and 5)
+      for (let i = 0; i < rating; i++) {
+        stars += `
              <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
              </svg>
          `;
-     }
-     return stars;
- }
- 
- // Call the function to fetch and display testimonials
- fetchTestimonials();
-</script>
-
-
-<script>
-  document.getElementById('testimonialForm').addEventListener('submit', async (e) => {
-    e.preventDefault(); 
-  
-    const formData = new FormData();
-    
-    // Get values from the form inputs
-    const name = document.getElementById('name').value;
-    const profession = document.getElementById('profession').value;
-    const review = document.getElementById('review').value;
-    const stars = document.getElementById('stars').value;
-    
-    // Append the data to the FormData object
-    formData.append('name', name);
-    formData.append('profession', profession);
-    formData.append('review', review);
-    formData.append('stars', stars);
-  
-    // If there's an image, append it as well
-    const imageFile = document.getElementById('image').files[0];
-    if (imageFile) {
-      formData.append('image', imageFile);
-    }
-  
-    try {
-      // Send POST request to API
-      const response = await fetch('http://localhost:3000/api/v1/testimonials/add', {
-        method: 'POST',
-        body: formData,
-      });
-  
-      const result = await response.json();
-      console.log("result------>  "+result)
-  
-      if (response.ok) {
-        alert('Testimonial added successfully!');
-        console.log(result);
-      } else {
-        alert('Error adding testimonial: ' + result.error);
       }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('There was an error. Please try again.');
+      return stars;
     }
-  });
-</script> 
-  
+
+    // Call the function to fetch and display testimonials
+    fetchTestimonials();
+  </script>
+
+
+  <script>
+    document.getElementById('testimonialForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData();
+
+      // Get values from the form inputs
+      const name = document.getElementById('name').value;
+      const profession = document.getElementById('profession').value;
+      const review = document.getElementById('review').value;
+      const stars = document.getElementById('stars').value;
+
+      // Append the data to the FormData object
+      formData.append('name', name);
+      formData.append('profession', profession);
+      formData.append('review', review);
+      formData.append('stars', stars);
+
+      // If there's an image, append it as well
+      const imageFile = document.getElementById('image').files[0];
+      if (imageFile) {
+        formData.append('image', imageFile);
+      }
+
+      try {
+        // Send POST request to API
+        const response = await fetch('http://localhost:3000/api/v1/testimonials/add', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const result = await response.json();
+        console.log("result------>  " + result)
+
+        if (response.ok) {
+          alert('Testimonial added successfully!');
+          console.log(result);
+        } else {
+          alert('Error adding testimonial: ' + result.error);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error. Please try again.');
+      }
+    });
+  </script>
+
 </body>
+<script src="navbar.js"></script>
+</body>
+
 </html>

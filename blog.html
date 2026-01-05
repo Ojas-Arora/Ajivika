@@ -1,76 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <title>Blogs - Ajivika</title>
-        <link rel="stylesheet" href="navbar.css" />
-        <link rel="stylesheet" href="blog.css">
-        <link rel="stylesheet" href="cssfiles/Scroll.css">
-      </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <title>Blogs - Ajivika</title>
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="cssfiles/Scroll.css">
+</head>
+
 <body>
 
-   <!-- Top scroll button -->
-    <div id="scrollButton" class="hidden">
-        <div class="outer-circle">
-            <div class="inner-circle">
-                <div class="arrow">↑</div>
-            </div>
-        </div>
+  <!-- Top scroll button -->
+  <div id="scrollButton" class="hidden">
+    <div class="outer-circle">
+      <div class="inner-circle">
+        <div class="arrow">↑</div>
+      </div>
     </div>
+  </div>
 
 
   <div id="cursor"></div>
-    <!-- Navigation -->
+  <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">
-      <button class="image-button1">
-        <img src="./AJIVIKA2.svg" alt="Image Button1" class="image-icon1" />
-      </button>
-    </div>
-    <!-- Floating Image Button -->
+    <a href="index.html" class="logo">
+      <img src="./AJIVIKA2.svg" alt="Ajivika Logo">
+    </a>
 
-    <!-- hamburger menu -->
     <button class="hamburger" onclick="toggleMenu()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
-    <!-- Navigation Links -->
+
     <ul class="nav-links">
+      <li><a href="./index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
+      <li><a href="./about.html"><i class="fas fa-address-card"></i> <span>About Us</span></a></li>
+      <li><a href="./contact.html"><i class="fas fa-envelope"></i> <span>Contact Us</span></a></li>
+      <li><a href="./pricing.html"><i class="fas fa-comments"></i> <span>Go Pro</span></a></li>
+      <li><a href="./contributors/contributor.html"><i class="fas fa-users"></i> <span>Contributors</span></a></li>
+      <li><a href="./register.html"><i class="fas fa-user-plus"></i> <span>Register</span></a></li>
+
       <li>
-        <a href="./index.html"><i class="fas fa-home"></i><span>Home</span></a>
+        <button class="translate-button" onclick="toggleTranslate()">🌐</button>
+        <div id="google_translate_element"
+          style="position: absolute; top: 60px; right: 0; display: none; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
       </li>
-      <li>
-        <a href="./about.html"><i class="fas fa-address-card"></i> <span>About Us</span></a>
-      </li>
-      <li>
-        <a href="./contact.html"><i class="fas fa-envelope"></i> <span>Contact Us</span></a>
-      </li>
-      <li>
-        <a href="./pricing.html"><i class="fas fa-comments"></i><span>Go Pro</span></a>
-      </li>
-      <li>
-        <a href="./contributors/contributor.html"><i class="fas fa-users"></i><span>Contributors</span></a>
-      </li>
-      <!-- <li><a href="./login.html"><i class="fas fa-sign-in-alt"></i><span>Log In</span></a></li> -->
-      <li>
-        <a href="./register.html"><i class="fas fa-user-plus"></i> <span>Register</span></a>
-      </li>
-      <li>
-        <button class="translate-button" onclick="toggleTranslate()">
-          🌐
-        </button>
-        <div id="google_translate_element"></div>
-      </li>
+
       <li>
         <label class="theme-switch">
-          <input type="checkbox" class="theme-switch__checkbox" />
+          <input type="checkbox" class="theme-switch__checkbox">
           <div class="theme-switch__container">
             <div class="theme-switch__clouds"></div>
             <div class="theme-switch__stars-container">
@@ -95,349 +84,60 @@
     </ul>
   </nav>
 
-  <button class="back-button" onclick="window.history.back();">
-    <i class="fas fa-arrow-left"></i>
-  </button>
-
   <!-- Blogs section -->
   <div class="blogContainer">
     <h1>Blogs</h1>
     <div class="blogCards">
-        <div id="card" class="card1">
-            <h2>Our goals</h2>
-            <div class="imageContainer">
-                <img src="https://blogassets.leverageedu.com/media/uploads/2022/01/29153455/How-to-Choose-a-Career-path.jpg" alt="img">
-            </div>
-            <p>
-                "Ajvika" means "career" in Sanskrit. Our goal is to provide you with the best career advice and resources to help you grow in your career. We provide tools and resources for every career stage. 
-            </p>
-            <button onclick="window.location.href='blog1.html';">Read More</button>
+      <div id="card" class="card1">
+        <h2>Our goals</h2>
+        <div class="imageContainer">
+          <img src="https://blogassets.leverageedu.com/media/uploads/2022/01/29153455/How-to-Choose-a-Career-path.jpg"
+            alt="img">
         </div>
-        <div id="card" class="card2">
-            <h2>Services we provide</h2>
-            <div class="imageContainer">
-                <img src="https://media.istockphoto.com/vectors/human-resources-management-concept-vector-id849410148?k=6&m=849410148&s=612x612&w=0&h=EQBjLrjEJ070ZxSqc6I2ccEJ_ALjjBeZ6E_-lPzTwfw=" alt="">
-            </div>
-            <p>
-                We provide services like creating professional resumes, applying for top jobs, and much more. We also provide tools and resources for every career stage. 
-            </p>
-            <button onclick="window.location.href='blog2.html';">Read More</button>
+        <p>
+          "Ajvika" means "career" in Sanskrit. Our goal is to provide you with the best career advice and resources to
+          help you grow in your career. We provide tools and resources for every career stage.
+        </p>
+        <button onclick="window.location.href='blog1.html';">Read More</button>
+      </div>
+      <div id="card" class="card2">
+        <h2>Services we provide</h2>
+        <div class="imageContainer">
+          <img
+            src="https://media.istockphoto.com/vectors/human-resources-management-concept-vector-id849410148?k=6&m=849410148&s=612x612&w=0&h=EQBjLrjEJ070ZxSqc6I2ccEJ_ALjjBeZ6E_-lPzTwfw="
+            alt="">
         </div>
-        <div id="card" class="card3">
-            <h2>Our future plans</h2>
-            <div class="imageContainer">
-                <img src="https://media.istockphoto.com/id/1061299140/photo/business-analytics-intelligence-concept-financial-charts-to-analyze-profit-and-finance.jpg?s=612x612&w=0&k=20&c=TchMejRzggMs9ycNzbMvLYE0vvlfubnu88fnWMRwdgY=" alt="">
-            </div>
-            <p>
-                We are planning to expand our services and provide more tools and resources for every career stage. We are also planning to provide more career advice and resources to help you grow in your career.
-            </p>
-            <button onclick="window.location.href='blog3.html';">Read More</button>
+        <p>
+          We provide services like creating professional resumes, applying for top jobs, and much more. We also provide
+          tools and resources for every career stage.
+        </p>
+        <button onclick="window.location.href='blog2.html';">Read More</button>
+      </div>
+      <div id="card" class="card3">
+        <h2>Our future plans</h2>
+        <div class="imageContainer">
+          <img
+            src="https://media.istockphoto.com/id/1061299140/photo/business-analytics-intelligence-concept-financial-charts-to-analyze-profit-and-finance.jpg?s=612x612&w=0&k=20&c=TchMejRzggMs9ycNzbMvLYE0vvlfubnu88fnWMRwdgY="
+            alt="">
         </div>
+        <p>
+          We are planning to expand our services and provide more tools and resources for every career stage. We are
+          also planning to provide more career advice and resources to help you grow in your career.
+        </p>
+        <button onclick="window.location.href='blog3.html';">Read More</button>
+      </div>
     </div>
   </div>
 
 
+  <script src="navbar.js"></script>
+
   <script>
-    // hamburger menu js
-    function toggleMenu() {
-      const navLinks = document.querySelector(".nav-links");
-      navLinks.classList.toggle("active");
-    }
+    document.querySelector('.image-button1').addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });      
   </script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const themeToggle = document.querySelector('.theme-switch__checkbox');
-      const currentTheme = localStorage.getItem('theme');
-      if (currentTheme === 'dark') {
-        document.body.classList.add('dark');
-        document.body.classList.remove('light');
-        themeToggle.checked = true;
-      } else {
-        document.body.classList.add('light');
-        document.body.classList.remove('dark');
-      }
-
-      themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
-          document.body.classList.add('dark');
-          document.body.classList.remove('light');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          document.body.classList.remove('dark');
-          document.body.classList.add('light');
-          localStorage.setItem('theme', 'light');
-        }
-      });
-    });
-  </script>
-
-  <!-- Footer -->
-  <footer style="background-color: #222; color: #fff; padding: 20px 10px">
-    <div
-      class="footer-container"
-      style="
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-        max-width: 1200px;
-        margin: auto;
-      "
-    >
-      <!-- About Section -->
-      <div class="footer-section" style="flex: 1; min-width: 200px">
-        <h3>
-          <i class="fa fa-user" style="color: #d6a52b; margin-right: 8px;"></i> 
-          About Ajivika
-        </h3>
-        
-        <p style="font-size: 14px; line-height: 1.6">
-          Ajivika is your one-stop destination for career growth and learning.
-          From creating professional resumes to applying for top jobs, we
-          provide tools and resources for every career stage.
-        </p>
-      </div>
-
-      <!-- Quick Links -->
-      <div
-        class="footer-section quick-link"
-        style="flex: 1; min-width: 200px"
-      >
-      <h3>
-        <i class="fa fa-link" style="color: #d6a52b; margin-right: 8px;"></i>
-        Quick Links
-      </h3>
-      
-        <ul
-          style="
-            list-style: none;
-            padding: 0;
-            font-size: 14px;
-            line-height: 1.8;
-          "
-        >
-        <li>
-          <a href="./index.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-home" style="margin-right: 8px;"></i> Home
-          </a>
-        </li>
-        <li>
-          <a href="./about.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-info-circle" style="margin-right: 8px;"></i> About Us
-          </a>
-        </li>
-        <li>
-          <a href="./contact.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-envelope" style="margin-right: 8px;"></i> Contact
-          </a>
-        </li>
-        <li>
-          <a href="./pricing.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-dollar-sign" style="margin-right: 8px;"></i> Go Pro
-          </a>
-        </li>
-             
-        </ul>
-      </div>
-
-      <!-- Resources -->
-      <div class="footer-section resources" style="flex: 1; min-width: 200px">
-        <h3>
-          <i class="fa fa-book" style="color: #d6a52b; margin-right: 8px;"></i>
-          Resources
-        </h3>
-        
-        <ul
-          style="
-            list-style: none;
-            padding: 0;
-            font-size: 14px;
-            line-height: 1.8;
-          "
-        >
-        <li>
-          <a href="./blog.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-pencil-alt" style="margin-right: 8px;"></i> Blog
-          </a>
-        </li>
-        <li>
-          <a href="./testimonial.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-comment-dots" style="margin-right: 8px;"></i> Testimonial
-          </a>
-        </li>
-        <li>
-          <a href="./faq.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-question-circle" style="margin-right: 8px;"></i> FAQs
-          </a>
-        </li>
-        <li>
-          <a href="./terms.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-file-contract" style="margin-right: 8px;"></i> Terms & Conditions
-          </a>
-        </li>
-        <li>
-          <a href="./privacy.html" style="color: #fff; text-decoration: none; transition: color 0.3s;" 
-             onmouseover="this.style.color='#d6a52b'" 
-             onmouseout="this.style.color='#fff'">
-            <i class="fa fa-user-secret" style="margin-right: 8px;"></i> Privacy Policy
-          </a>
-        </li>
-        
-        </ul>
-      </div>
-
-      <!-- Social Media -->
-      <div
-        class="footer-section social-icons"
-        style="flex: 1; min-width: 200px"
-      >
-      <h3>
-        <i class="fa fa-hashtag" style="color: #d6a52b; margin-right: 8px;"></i>
-        Follow Us
-      </h3>
-      
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            font-size: 20px;
-          "
-        >
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            style="color: #fff; text-decoration: none"
-          >
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            style="color: #fff; text-decoration: none"
-          >
-            <i class="fab fa-x-twitter"></i>
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            style="color: #fff; text-decoration: none"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            style="color: #fff; text-decoration: none"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-        <!--payment options-->
-        <div class="payments">
-          <h3>
-            <i class="fa-solid fa-credit-card" style="color: #d6a52b; margin-right: 8px; padding-top: 15px;"></i>we accept</h3>
-          <a href="https://www.apple.com/apple-pay/" target="_blank" style="color:#fff;"><i class="fab fa-apple-pay" style="font-size: 40px;"></i></a>
-          <a href="https://pay.google.com/intl/en_in/about/" style="color:#fff;"><i class="fa-brands fa-google-pay" style="font-size: 40px;"></i></a>
-          <a href="https://redemption.mastercard.com/#/user/login?language=en-US" style="color:#fff;"><i class="fa-brands fa-cc-mastercard" style="font-size: 30px;"></i></a>
-          <a href="https://www.visa.com.au/en_au/account/login" style="color:#fff;"><i class="fa-brands fa-cc-visa" style="font-size: 30px;"></i></a>
-    </div>
-      </div>
-
-      <!-- Subscribe Section -->
-      <div
-        class="footer-section subscribe-section"
-        style="flex: 1; min-width: 200px"
-      >
-      <h3>
-        <i class="fa fa-bell" style="color: #d6a52b; margin-right: 8px;"></i>
-        Subscribe to Our Newsletter
-      </h3>
-     
-      
-        <form
-          action="#"
-          method="POST"
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-          "
-        >
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-          />
-          </button>
-          <button type="submit" class="subscribe-button">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #444" />
-    <div class="imf">
-      <img src="./AJIVIKA2.svg" alt="" height="58px">
-      <div style="text-align: center; font-size: 14px; color: #aaa">
-        <p>&copy; 2024 Ajivika™. All rights reserved.</p>
-        <p>Designed and developed with ❤️ by the Ajivika Team.</p>
-      </div>
-    </div>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="index.js"></script>
-  <script src="js/Scroll.js"></script>
-  
- 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: 'en',
-            includedLanguages: 'en,hi,es,fr,de,it,ja,zh-CN',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false,
-          },
-          'google_translate_element'
-        );
-      }
-
-      function toggleTranslate() {
-        const translateElement = document.getElementById('google_translate_element');
-        if (translateElement.style.display === 'none' || translateElement.style.display === '') {
-          translateElement.style.display = 'block';
-        } else {
-          translateElement.style.display = 'none';
-        }
-      }
-    </script>
-
-    <script>
-      document.querySelector('.image-button1').addEventListener('click', function() {
-        window.location.href = 'index.html';
-      });      
-    </script>
 
 </body>
+
 </html>
