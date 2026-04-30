@@ -18,7 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
+    "jsonwebtoken": "^9.0.3",
     "mongodb": "^6.13.0",
     "mongoose": "^8.9.4",
     "nodemailer": "^6.10.0",
